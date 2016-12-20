@@ -88,7 +88,11 @@ setup(
         #('docs', include_all_subfiles('docs')),
     },
     package_data={
-        #TODO
+        'ProsperSlides':[
+            'R_templates/*',
+            'slide_templates/*',
+            'ProsperSlides.cfg'
+        ]
     },
     install_requires=[
         'ProsperCommon==0.3.4',
