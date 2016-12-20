@@ -1,0 +1,28 @@
+{
+    "package_requires":[
+        "jsonlite",
+        "quantmod",
+        "data.table",
+        "RODBC"
+    ],
+    "package_overrides":{
+        "quantmod":{
+            "robject_translations":{"skeleton.TA":"skeletonTA"}
+        }
+    },
+    "robjects":[
+        "emd <- odbcConnect(\"evemarketdata\")"
+    ],
+    "required_args":[
+        "itemid",
+        "regionid",
+        "img_type",
+        "img_path",
+        "img_width",
+        "img_height",
+        "plot_title",
+        "default_TA",
+        "TA_args",
+        "default_subset"
+    ]
+}
