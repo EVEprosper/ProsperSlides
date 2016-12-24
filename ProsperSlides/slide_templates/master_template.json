@@ -1,0 +1,4350 @@
+{
+  "masters": [
+    {
+      "pageType": "MASTER",
+      "objectId": "simple-light",
+      "pageProperties": {
+        "colorScheme": {
+          "colors": [
+            {
+              "type": "DARK1",
+              "color": {}
+            },
+            {
+              "type": "LIGHT1",
+              "color": {
+                "blue": 1,
+                "green": 1,
+                "red": 1
+              }
+            },
+            {
+              "type": "DARK2",
+              "color": {
+                "blue": 0.4,
+                "green": 0.4,
+                "red": 0.4
+              }
+            },
+            {
+              "type": "LIGHT2",
+              "color": {
+                "blue": 0.8,
+                "green": 0.8,
+                "red": 0.8
+              }
+            },
+            {
+              "type": "ACCENT1",
+              "color": {
+                "blue": 0.7294118,
+                "green": 0.5058824,
+                "red": 0.22745098
+              }
+            },
+            {
+              "type": "ACCENT2",
+              "color": {
+                "blue": 0.22352941,
+                "green": 0.62352943,
+                "red": 0.84705883
+              }
+            },
+            {
+              "type": "ACCENT3",
+              "color": {
+                "blue": 0.25882354,
+                "green": 0.67058825,
+                "red": 0.54509807
+              }
+            },
+            {
+              "type": "ACCENT4",
+              "color": {
+                "blue": 0.70980394,
+                "green": 0.654902,
+                "red": 0.34117648
+              }
+            },
+            {
+              "type": "ACCENT5",
+              "color": {
+                "blue": 0.8235294,
+                "green": 0.5058824,
+                "red": 0.54509807
+              }
+            },
+            {
+              "type": "ACCENT6",
+              "color": {
+                "blue": 0.20392157,
+                "green": 0.2,
+                "red": 0.5882353
+              }
+            },
+            {
+              "type": "HYPERLINK",
+              "color": {
+                "blue": 0.8,
+                "green": 0.33333334,
+                "red": 0.06666667
+              }
+            },
+            {
+              "type": "FOLLOWED_HYPERLINK",
+              "color": {
+                "blue": 0.8,
+                "green": 0.06666667,
+                "red": 0.4
+              }
+            },
+            {
+              "type": "TEXT1",
+              "color": {}
+            },
+            {
+              "type": "BACKGROUND1",
+              "color": {
+                "blue": 1,
+                "green": 1,
+                "red": 1
+              }
+            },
+            {
+              "type": "TEXT2",
+              "color": {
+                "blue": 0.8,
+                "green": 0.8,
+                "red": 0.8
+              }
+            },
+            {
+              "type": "BACKGROUND2",
+              "color": {
+                "blue": 0.4,
+                "green": 0.4,
+                "red": 0.4
+              }
+            }
+          ]
+        },
+        "pageBackgroundFill": {
+          "solidFill": {
+            "color": {
+              "themeColor": "LIGHT1"
+            },
+            "alpha": 1
+          }
+        }
+      },
+      "pageElements": [
+        {
+          "shape": {
+            "shapeType": "TEXT_BOX",
+            "text": {
+              "lists": {
+                "bodyPlaceholderListEntity": {
+                  "nestingLevel": {
+                    "8": {
+                      "bulletStyle": {
+                        "bold": false,
+                        "fontFamily": "Roboto Condensed",
+                        "foregroundColor": {
+                          "opaqueColor": {
+                            "themeColor": "DARK1"
+                          }
+                        },
+                        "backgroundColor": {},
+                        "italic": false,
+                        "strikethrough": false,
+                        "fontSize": {
+                          "magnitude": 36,
+                          "unit": "PT"
+                        },
+                        "baselineOffset": "NONE",
+                        "underline": false,
+                        "smallCaps": false
+                      }
+                    },
+                    "6": {
+                      "bulletStyle": {
+                        "bold": false,
+                        "fontFamily": "Roboto Condensed",
+                        "foregroundColor": {
+                          "opaqueColor": {
+                            "themeColor": "DARK1"
+                          }
+                        },
+                        "backgroundColor": {},
+                        "italic": false,
+                        "strikethrough": false,
+                        "fontSize": {
+                          "magnitude": 36,
+                          "unit": "PT"
+                        },
+                        "baselineOffset": "NONE",
+                        "underline": false,
+                        "smallCaps": false
+                      }
+                    },
+                    "0": {
+                      "bulletStyle": {
+                        "bold": false,
+                        "fontFamily": "Roboto Condensed",
+                        "foregroundColor": {
+                          "opaqueColor": {
+                            "themeColor": "DARK1"
+                          }
+                        },
+                        "backgroundColor": {},
+                        "italic": false,
+                        "strikethrough": false,
+                        "fontSize": {
+                          "magnitude": 36,
+                          "unit": "PT"
+                        },
+                        "baselineOffset": "NONE",
+                        "underline": false,
+                        "smallCaps": false
+                      }
+                    },
+                    "7": {
+                      "bulletStyle": {
+                        "bold": false,
+                        "fontFamily": "Roboto Condensed",
+                        "foregroundColor": {
+                          "opaqueColor": {
+                            "themeColor": "DARK1"
+                          }
+                        },
+                        "backgroundColor": {},
+                        "italic": false,
+                        "strikethrough": false,
+                        "fontSize": {
+                          "magnitude": 36,
+                          "unit": "PT"
+                        },
+                        "baselineOffset": "NONE",
+                        "underline": false,
+                        "smallCaps": false
+                      }
+                    },
+                    "1": {
+                      "bulletStyle": {
+                        "bold": false,
+                        "fontFamily": "Roboto Condensed",
+                        "foregroundColor": {
+                          "opaqueColor": {
+                            "themeColor": "DARK1"
+                          }
+                        },
+                        "backgroundColor": {},
+                        "italic": false,
+                        "strikethrough": false,
+                        "fontSize": {
+                          "magnitude": 36,
+                          "unit": "PT"
+                        },
+                        "baselineOffset": "NONE",
+                        "underline": false,
+                        "smallCaps": false
+                      }
+                    },
+                    "2": {
+                      "bulletStyle": {
+                        "bold": false,
+                        "fontFamily": "Roboto Condensed",
+                        "foregroundColor": {
+                          "opaqueColor": {
+                            "themeColor": "DARK1"
+                          }
+                        },
+                        "backgroundColor": {},
+                        "italic": false,
+                        "strikethrough": false,
+                        "fontSize": {
+                          "magnitude": 36,
+                          "unit": "PT"
+                        },
+                        "baselineOffset": "NONE",
+                        "underline": false,
+                        "smallCaps": false
+                      }
+                    },
+                    "4": {
+                      "bulletStyle": {
+                        "bold": false,
+                        "fontFamily": "Roboto Condensed",
+                        "foregroundColor": {
+                          "opaqueColor": {
+                            "themeColor": "DARK1"
+                          }
+                        },
+                        "backgroundColor": {},
+                        "italic": false,
+                        "strikethrough": false,
+                        "fontSize": {
+                          "magnitude": 36,
+                          "unit": "PT"
+                        },
+                        "baselineOffset": "NONE",
+                        "underline": false,
+                        "smallCaps": false
+                      }
+                    },
+                    "5": {
+                      "bulletStyle": {
+                        "bold": false,
+                        "fontFamily": "Roboto Condensed",
+                        "foregroundColor": {
+                          "opaqueColor": {
+                            "themeColor": "DARK1"
+                          }
+                        },
+                        "backgroundColor": {},
+                        "italic": false,
+                        "strikethrough": false,
+                        "fontSize": {
+                          "magnitude": 36,
+                          "unit": "PT"
+                        },
+                        "baselineOffset": "NONE",
+                        "underline": false,
+                        "smallCaps": false
+                      }
+                    },
+                    "3": {
+                      "bulletStyle": {
+                        "bold": false,
+                        "fontFamily": "Roboto Condensed",
+                        "foregroundColor": {
+                          "opaqueColor": {
+                            "themeColor": "DARK1"
+                          }
+                        },
+                        "backgroundColor": {},
+                        "italic": false,
+                        "strikethrough": false,
+                        "fontSize": {
+                          "magnitude": 36,
+                          "unit": "PT"
+                        },
+                        "baselineOffset": "NONE",
+                        "underline": false,
+                        "smallCaps": false
+                      }
+                    }
+                  },
+                  "listId": "bodyPlaceholderListEntity"
+                }
+              },
+              "textElements": [
+                {
+                  "paragraphMarker": {
+                    "style": {
+                      "indentFirstLine": {
+                        "unit": "PT"
+                      },
+                      "spaceBelow": {
+                        "unit": "PT"
+                      },
+                      "lineSpacing": 100,
+                      "indentEnd": {
+                        "unit": "PT"
+                      },
+                      "alignment": "START",
+                      "spacingMode": "COLLAPSE_LISTS",
+                      "spaceAbove": {
+                        "unit": "PT"
+                      },
+                      "direction": "LEFT_TO_RIGHT",
+                      "indentStart": {
+                        "unit": "PT"
+                      }
+                    },
+                    "bullet": {
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": " ",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 1
+                },
+                {
+                  "textRun": {
+                    "style": {
+                      "bold": true,
+                      "fontFamily": "Roboto Condensed",
+                      "foregroundColor": {
+                        "opaqueColor": {
+                          "themeColor": "DARK1"
+                        }
+                      },
+                      "backgroundColor": {},
+                      "italic": false,
+                      "strikethrough": false,
+                      "fontSize": {
+                        "magnitude": 36,
+                        "unit": "PT"
+                      },
+                      "baselineOffset": "NONE",
+                      "underline": false,
+                      "smallCaps": false
+                    },
+                    "content": "\n"
+                  },
+                  "endIndex": 1
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {
+                      "indentFirstLine": {
+                        "unit": "PT"
+                      },
+                      "spaceBelow": {
+                        "unit": "PT"
+                      },
+                      "lineSpacing": 100,
+                      "indentEnd": {
+                        "unit": "PT"
+                      },
+                      "alignment": "START",
+                      "spacingMode": "COLLAPSE_LISTS",
+                      "spaceAbove": {
+                        "unit": "PT"
+                      },
+                      "direction": "LEFT_TO_RIGHT",
+                      "indentStart": {
+                        "unit": "PT"
+                      }
+                    },
+                    "bullet": {
+                      "nestingLevel": 1,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": " ",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 2,
+                  "startIndex": 1
+                },
+                {
+                  "textRun": {
+                    "style": {
+                      "bold": true,
+                      "fontFamily": "Roboto Condensed",
+                      "foregroundColor": {
+                        "opaqueColor": {
+                          "themeColor": "DARK1"
+                        }
+                      },
+                      "backgroundColor": {},
+                      "italic": false,
+                      "strikethrough": false,
+                      "fontSize": {
+                        "magnitude": 36,
+                        "unit": "PT"
+                      },
+                      "baselineOffset": "NONE",
+                      "underline": false,
+                      "smallCaps": false
+                    },
+                    "content": "\n"
+                  },
+                  "endIndex": 2,
+                  "startIndex": 1
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {
+                      "indentFirstLine": {
+                        "unit": "PT"
+                      },
+                      "spaceBelow": {
+                        "unit": "PT"
+                      },
+                      "lineSpacing": 100,
+                      "indentEnd": {
+                        "unit": "PT"
+                      },
+                      "alignment": "START",
+                      "spacingMode": "COLLAPSE_LISTS",
+                      "spaceAbove": {
+                        "unit": "PT"
+                      },
+                      "direction": "LEFT_TO_RIGHT",
+                      "indentStart": {
+                        "unit": "PT"
+                      }
+                    },
+                    "bullet": {
+                      "nestingLevel": 2,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": " ",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 3,
+                  "startIndex": 2
+                },
+                {
+                  "textRun": {
+                    "style": {
+                      "bold": true,
+                      "fontFamily": "Roboto Condensed",
+                      "foregroundColor": {
+                        "opaqueColor": {
+                          "themeColor": "DARK1"
+                        }
+                      },
+                      "backgroundColor": {},
+                      "italic": false,
+                      "strikethrough": false,
+                      "fontSize": {
+                        "magnitude": 36,
+                        "unit": "PT"
+                      },
+                      "baselineOffset": "NONE",
+                      "underline": false,
+                      "smallCaps": false
+                    },
+                    "content": "\n"
+                  },
+                  "endIndex": 3,
+                  "startIndex": 2
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {
+                      "indentFirstLine": {
+                        "unit": "PT"
+                      },
+                      "spaceBelow": {
+                        "unit": "PT"
+                      },
+                      "lineSpacing": 100,
+                      "indentEnd": {
+                        "unit": "PT"
+                      },
+                      "alignment": "START",
+                      "spacingMode": "COLLAPSE_LISTS",
+                      "spaceAbove": {
+                        "unit": "PT"
+                      },
+                      "direction": "LEFT_TO_RIGHT",
+                      "indentStart": {
+                        "unit": "PT"
+                      }
+                    },
+                    "bullet": {
+                      "nestingLevel": 3,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": " ",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 4,
+                  "startIndex": 3
+                },
+                {
+                  "textRun": {
+                    "style": {
+                      "bold": true,
+                      "fontFamily": "Roboto Condensed",
+                      "foregroundColor": {
+                        "opaqueColor": {
+                          "themeColor": "DARK1"
+                        }
+                      },
+                      "backgroundColor": {},
+                      "italic": false,
+                      "strikethrough": false,
+                      "fontSize": {
+                        "magnitude": 36,
+                        "unit": "PT"
+                      },
+                      "baselineOffset": "NONE",
+                      "underline": false,
+                      "smallCaps": false
+                    },
+                    "content": "\n"
+                  },
+                  "endIndex": 4,
+                  "startIndex": 3
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {
+                      "indentFirstLine": {
+                        "unit": "PT"
+                      },
+                      "spaceBelow": {
+                        "unit": "PT"
+                      },
+                      "lineSpacing": 100,
+                      "indentEnd": {
+                        "unit": "PT"
+                      },
+                      "alignment": "START",
+                      "spacingMode": "COLLAPSE_LISTS",
+                      "spaceAbove": {
+                        "unit": "PT"
+                      },
+                      "direction": "LEFT_TO_RIGHT",
+                      "indentStart": {
+                        "unit": "PT"
+                      }
+                    },
+                    "bullet": {
+                      "nestingLevel": 4,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": " ",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 5,
+                  "startIndex": 4
+                },
+                {
+                  "textRun": {
+                    "style": {
+                      "bold": true,
+                      "fontFamily": "Roboto Condensed",
+                      "foregroundColor": {
+                        "opaqueColor": {
+                          "themeColor": "DARK1"
+                        }
+                      },
+                      "backgroundColor": {},
+                      "italic": false,
+                      "strikethrough": false,
+                      "fontSize": {
+                        "magnitude": 36,
+                        "unit": "PT"
+                      },
+                      "baselineOffset": "NONE",
+                      "underline": false,
+                      "smallCaps": false
+                    },
+                    "content": "\n"
+                  },
+                  "endIndex": 5,
+                  "startIndex": 4
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {
+                      "indentFirstLine": {
+                        "unit": "PT"
+                      },
+                      "spaceBelow": {
+                        "unit": "PT"
+                      },
+                      "lineSpacing": 100,
+                      "indentEnd": {
+                        "unit": "PT"
+                      },
+                      "alignment": "START",
+                      "spacingMode": "COLLAPSE_LISTS",
+                      "spaceAbove": {
+                        "unit": "PT"
+                      },
+                      "direction": "LEFT_TO_RIGHT",
+                      "indentStart": {
+                        "unit": "PT"
+                      }
+                    },
+                    "bullet": {
+                      "nestingLevel": 5,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": " ",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 6,
+                  "startIndex": 5
+                },
+                {
+                  "textRun": {
+                    "style": {
+                      "bold": true,
+                      "fontFamily": "Roboto Condensed",
+                      "foregroundColor": {
+                        "opaqueColor": {
+                          "themeColor": "DARK1"
+                        }
+                      },
+                      "backgroundColor": {},
+                      "italic": false,
+                      "strikethrough": false,
+                      "fontSize": {
+                        "magnitude": 36,
+                        "unit": "PT"
+                      },
+                      "baselineOffset": "NONE",
+                      "underline": false,
+                      "smallCaps": false
+                    },
+                    "content": "\n"
+                  },
+                  "endIndex": 6,
+                  "startIndex": 5
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {
+                      "indentFirstLine": {
+                        "unit": "PT"
+                      },
+                      "spaceBelow": {
+                        "unit": "PT"
+                      },
+                      "lineSpacing": 100,
+                      "indentEnd": {
+                        "unit": "PT"
+                      },
+                      "alignment": "START",
+                      "spacingMode": "COLLAPSE_LISTS",
+                      "spaceAbove": {
+                        "unit": "PT"
+                      },
+                      "direction": "LEFT_TO_RIGHT",
+                      "indentStart": {
+                        "unit": "PT"
+                      }
+                    },
+                    "bullet": {
+                      "nestingLevel": 6,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": " ",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 7,
+                  "startIndex": 6
+                },
+                {
+                  "textRun": {
+                    "style": {
+                      "bold": true,
+                      "fontFamily": "Roboto Condensed",
+                      "foregroundColor": {
+                        "opaqueColor": {
+                          "themeColor": "DARK1"
+                        }
+                      },
+                      "backgroundColor": {},
+                      "italic": false,
+                      "strikethrough": false,
+                      "fontSize": {
+                        "magnitude": 36,
+                        "unit": "PT"
+                      },
+                      "baselineOffset": "NONE",
+                      "underline": false,
+                      "smallCaps": false
+                    },
+                    "content": "\n"
+                  },
+                  "endIndex": 7,
+                  "startIndex": 6
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {
+                      "indentFirstLine": {
+                        "unit": "PT"
+                      },
+                      "spaceBelow": {
+                        "unit": "PT"
+                      },
+                      "lineSpacing": 100,
+                      "indentEnd": {
+                        "unit": "PT"
+                      },
+                      "alignment": "START",
+                      "spacingMode": "COLLAPSE_LISTS",
+                      "spaceAbove": {
+                        "unit": "PT"
+                      },
+                      "direction": "LEFT_TO_RIGHT",
+                      "indentStart": {
+                        "unit": "PT"
+                      }
+                    },
+                    "bullet": {
+                      "nestingLevel": 7,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": " ",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 8,
+                  "startIndex": 7
+                },
+                {
+                  "textRun": {
+                    "style": {
+                      "bold": true,
+                      "fontFamily": "Roboto Condensed",
+                      "foregroundColor": {
+                        "opaqueColor": {
+                          "themeColor": "DARK1"
+                        }
+                      },
+                      "backgroundColor": {},
+                      "italic": false,
+                      "strikethrough": false,
+                      "fontSize": {
+                        "magnitude": 36,
+                        "unit": "PT"
+                      },
+                      "baselineOffset": "NONE",
+                      "underline": false,
+                      "smallCaps": false
+                    },
+                    "content": "\n"
+                  },
+                  "endIndex": 8,
+                  "startIndex": 7
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {
+                      "indentFirstLine": {
+                        "unit": "PT"
+                      },
+                      "spaceBelow": {
+                        "unit": "PT"
+                      },
+                      "lineSpacing": 100,
+                      "indentEnd": {
+                        "unit": "PT"
+                      },
+                      "alignment": "START",
+                      "spacingMode": "COLLAPSE_LISTS",
+                      "spaceAbove": {
+                        "unit": "PT"
+                      },
+                      "direction": "LEFT_TO_RIGHT",
+                      "indentStart": {
+                        "unit": "PT"
+                      }
+                    },
+                    "bullet": {
+                      "nestingLevel": 8,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": " ",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 9,
+                  "startIndex": 8
+                },
+                {
+                  "textRun": {
+                    "style": {
+                      "bold": true,
+                      "fontFamily": "Roboto Condensed",
+                      "foregroundColor": {
+                        "opaqueColor": {
+                          "themeColor": "DARK1"
+                        }
+                      },
+                      "backgroundColor": {},
+                      "italic": false,
+                      "strikethrough": false,
+                      "fontSize": {
+                        "magnitude": 36,
+                        "unit": "PT"
+                      },
+                      "baselineOffset": "NONE",
+                      "underline": false,
+                      "smallCaps": false
+                    },
+                    "content": "\n"
+                  },
+                  "endIndex": 9,
+                  "startIndex": 8
+                }
+              ]
+            },
+            "shapeProperties": {
+              "shapeBackgroundFill": {
+                "propertyState": "NOT_RENDERED",
+                "solidFill": {
+                  "color": {
+                    "rgbColor": {
+                      "blue": 1,
+                      "green": 1,
+                      "red": 1
+                    }
+                  },
+                  "alpha": 1
+                }
+              },
+              "outline": {
+                "dashStyle": "SOLID",
+                "propertyState": "NOT_RENDERED",
+                "weight": {
+                  "magnitude": 9525,
+                  "unit": "EMU"
+                },
+                "outlineFill": {
+                  "solidFill": {
+                    "color": {
+                      "rgbColor": {}
+                    },
+                    "alpha": 1
+                  }
+                }
+              },
+              "shadow": {
+                "color": {
+                  "rgbColor": {}
+                },
+                "alpha": 1,
+                "blurRadius": {
+                  "unit": "EMU"
+                },
+                "type": "OUTER",
+                "transform": {
+                  "scaleY": 1,
+                  "scaleX": 1,
+                  "unit": "EMU"
+                },
+                "alignment": "BOTTOM_LEFT",
+                "propertyState": "NOT_RENDERED",
+                "rotateWithShape": false
+              }
+            },
+            "placeholder": {
+              "type": "TITLE"
+            }
+          },
+          "transform": {
+            "translateX": 457200,
+            "scaleY": 0.2858,
+            "scaleX": 2.7432,
+            "translateY": 205978.49000000002,
+            "unit": "EMU"
+          },
+          "objectId": "p1_i2",
+          "size": {
+            "width": {
+              "magnitude": 3000000,
+              "unit": "EMU"
+            },
+            "height": {
+              "magnitude": 3000000,
+              "unit": "EMU"
+            }
+          }
+        },
+        {
+          "shape": {
+            "shapeType": "TEXT_BOX",
+            "text": {
+              "lists": {
+                "bodyPlaceholderListEntity": {
+                  "nestingLevel": {
+                    "8": {
+                      "bulletStyle": {
+                        "bold": false,
+                        "fontFamily": "Roboto Condensed",
+                        "foregroundColor": {
+                          "opaqueColor": {
+                            "themeColor": "DARK1"
+                          }
+                        },
+                        "backgroundColor": {},
+                        "italic": false,
+                        "strikethrough": false,
+                        "fontSize": {
+                          "magnitude": 18,
+                          "unit": "PT"
+                        },
+                        "baselineOffset": "NONE",
+                        "underline": false,
+                        "smallCaps": false
+                      }
+                    },
+                    "6": {
+                      "bulletStyle": {
+                        "bold": false,
+                        "fontFamily": "Roboto Condensed",
+                        "foregroundColor": {
+                          "opaqueColor": {
+                            "themeColor": "DARK1"
+                          }
+                        },
+                        "backgroundColor": {},
+                        "italic": false,
+                        "strikethrough": false,
+                        "fontSize": {
+                          "magnitude": 18,
+                          "unit": "PT"
+                        },
+                        "baselineOffset": "NONE",
+                        "underline": false,
+                        "smallCaps": false
+                      }
+                    },
+                    "0": {
+                      "bulletStyle": {
+                        "bold": false,
+                        "fontFamily": "Roboto Condensed",
+                        "foregroundColor": {
+                          "opaqueColor": {
+                            "themeColor": "DARK1"
+                          }
+                        },
+                        "backgroundColor": {},
+                        "italic": false,
+                        "strikethrough": false,
+                        "fontSize": {
+                          "magnitude": 30,
+                          "unit": "PT"
+                        },
+                        "baselineOffset": "NONE",
+                        "underline": false,
+                        "smallCaps": false
+                      }
+                    },
+                    "7": {
+                      "bulletStyle": {
+                        "bold": false,
+                        "fontFamily": "Roboto Condensed",
+                        "foregroundColor": {
+                          "opaqueColor": {
+                            "themeColor": "DARK1"
+                          }
+                        },
+                        "backgroundColor": {},
+                        "italic": false,
+                        "strikethrough": false,
+                        "fontSize": {
+                          "magnitude": 18,
+                          "unit": "PT"
+                        },
+                        "baselineOffset": "NONE",
+                        "underline": false,
+                        "smallCaps": false
+                      }
+                    },
+                    "1": {
+                      "bulletStyle": {
+                        "bold": false,
+                        "fontFamily": "Roboto Condensed",
+                        "foregroundColor": {
+                          "opaqueColor": {
+                            "themeColor": "DARK1"
+                          }
+                        },
+                        "backgroundColor": {},
+                        "italic": false,
+                        "strikethrough": false,
+                        "fontSize": {
+                          "magnitude": 24,
+                          "unit": "PT"
+                        },
+                        "baselineOffset": "NONE",
+                        "underline": false,
+                        "smallCaps": false
+                      }
+                    },
+                    "2": {
+                      "bulletStyle": {
+                        "bold": false,
+                        "fontFamily": "Roboto Condensed",
+                        "foregroundColor": {
+                          "opaqueColor": {
+                            "themeColor": "DARK1"
+                          }
+                        },
+                        "backgroundColor": {},
+                        "italic": false,
+                        "strikethrough": false,
+                        "fontSize": {
+                          "magnitude": 24,
+                          "unit": "PT"
+                        },
+                        "baselineOffset": "NONE",
+                        "underline": false,
+                        "smallCaps": false
+                      }
+                    },
+                    "4": {
+                      "bulletStyle": {
+                        "bold": false,
+                        "fontFamily": "Roboto Condensed",
+                        "foregroundColor": {
+                          "opaqueColor": {
+                            "themeColor": "DARK1"
+                          }
+                        },
+                        "backgroundColor": {},
+                        "italic": false,
+                        "strikethrough": false,
+                        "fontSize": {
+                          "magnitude": 18,
+                          "unit": "PT"
+                        },
+                        "baselineOffset": "NONE",
+                        "underline": false,
+                        "smallCaps": false
+                      }
+                    },
+                    "5": {
+                      "bulletStyle": {
+                        "bold": false,
+                        "fontFamily": "Roboto Condensed",
+                        "foregroundColor": {
+                          "opaqueColor": {
+                            "themeColor": "DARK1"
+                          }
+                        },
+                        "backgroundColor": {},
+                        "italic": false,
+                        "strikethrough": false,
+                        "fontSize": {
+                          "magnitude": 18,
+                          "unit": "PT"
+                        },
+                        "baselineOffset": "NONE",
+                        "underline": false,
+                        "smallCaps": false
+                      }
+                    },
+                    "3": {
+                      "bulletStyle": {
+                        "bold": false,
+                        "fontFamily": "Roboto Condensed",
+                        "foregroundColor": {
+                          "opaqueColor": {
+                            "themeColor": "DARK1"
+                          }
+                        },
+                        "backgroundColor": {},
+                        "italic": false,
+                        "strikethrough": false,
+                        "fontSize": {
+                          "magnitude": 18,
+                          "unit": "PT"
+                        },
+                        "baselineOffset": "NONE",
+                        "underline": false,
+                        "smallCaps": false
+                      }
+                    }
+                  },
+                  "listId": "bodyPlaceholderListEntity"
+                }
+              },
+              "textElements": [
+                {
+                  "paragraphMarker": {
+                    "style": {
+                      "indentFirstLine": {
+                        "unit": "PT"
+                      },
+                      "spaceBelow": {
+                        "unit": "PT"
+                      },
+                      "lineSpacing": 100,
+                      "indentEnd": {
+                        "unit": "PT"
+                      },
+                      "alignment": "START",
+                      "spacingMode": "COLLAPSE_LISTS",
+                      "spaceAbove": {
+                        "magnitude": 6,
+                        "unit": "PT"
+                      },
+                      "direction": "LEFT_TO_RIGHT",
+                      "indentStart": {
+                        "unit": "PT"
+                      }
+                    },
+                    "bullet": {
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": "\u00e2\u20ac\u00a2",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 1
+                },
+                {
+                  "textRun": {
+                    "style": {
+                      "bold": false,
+                      "fontFamily": "Roboto Condensed",
+                      "foregroundColor": {
+                        "opaqueColor": {
+                          "themeColor": "DARK1"
+                        }
+                      },
+                      "backgroundColor": {},
+                      "italic": false,
+                      "strikethrough": false,
+                      "fontSize": {
+                        "magnitude": 30,
+                        "unit": "PT"
+                      },
+                      "baselineOffset": "NONE",
+                      "underline": false,
+                      "smallCaps": false
+                    },
+                    "content": "\n"
+                  },
+                  "endIndex": 1
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {
+                      "indentFirstLine": {
+                        "unit": "PT"
+                      },
+                      "spaceBelow": {
+                        "unit": "PT"
+                      },
+                      "lineSpacing": 100,
+                      "indentEnd": {
+                        "unit": "PT"
+                      },
+                      "alignment": "START",
+                      "spacingMode": "COLLAPSE_LISTS",
+                      "spaceAbove": {
+                        "magnitude": 5,
+                        "unit": "PT"
+                      },
+                      "direction": "LEFT_TO_RIGHT",
+                      "indentStart": {
+                        "unit": "PT"
+                      }
+                    },
+                    "bullet": {
+                      "nestingLevel": 1,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": "\u00e2\u2014\u2039",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 2,
+                  "startIndex": 1
+                },
+                {
+                  "textRun": {
+                    "style": {
+                      "bold": false,
+                      "fontFamily": "Roboto Condensed",
+                      "foregroundColor": {
+                        "opaqueColor": {
+                          "themeColor": "DARK1"
+                        }
+                      },
+                      "backgroundColor": {},
+                      "italic": false,
+                      "strikethrough": false,
+                      "fontSize": {
+                        "magnitude": 24,
+                        "unit": "PT"
+                      },
+                      "baselineOffset": "NONE",
+                      "underline": false,
+                      "smallCaps": false
+                    },
+                    "content": "\n"
+                  },
+                  "endIndex": 2,
+                  "startIndex": 1
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {
+                      "indentFirstLine": {
+                        "unit": "PT"
+                      },
+                      "spaceBelow": {
+                        "unit": "PT"
+                      },
+                      "lineSpacing": 100,
+                      "indentEnd": {
+                        "unit": "PT"
+                      },
+                      "alignment": "START",
+                      "spacingMode": "COLLAPSE_LISTS",
+                      "spaceAbove": {
+                        "magnitude": 5,
+                        "unit": "PT"
+                      },
+                      "direction": "LEFT_TO_RIGHT",
+                      "indentStart": {
+                        "unit": "PT"
+                      }
+                    },
+                    "bullet": {
+                      "nestingLevel": 2,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": "\u00e2\u2013\u00a0",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 3,
+                  "startIndex": 2
+                },
+                {
+                  "textRun": {
+                    "style": {
+                      "bold": false,
+                      "fontFamily": "Roboto Condensed",
+                      "foregroundColor": {
+                        "opaqueColor": {
+                          "themeColor": "DARK1"
+                        }
+                      },
+                      "backgroundColor": {},
+                      "italic": false,
+                      "strikethrough": false,
+                      "fontSize": {
+                        "magnitude": 24,
+                        "unit": "PT"
+                      },
+                      "baselineOffset": "NONE",
+                      "underline": false,
+                      "smallCaps": false
+                    },
+                    "content": "\n"
+                  },
+                  "endIndex": 3,
+                  "startIndex": 2
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {
+                      "indentFirstLine": {
+                        "unit": "PT"
+                      },
+                      "spaceBelow": {
+                        "unit": "PT"
+                      },
+                      "lineSpacing": 100,
+                      "indentEnd": {
+                        "unit": "PT"
+                      },
+                      "alignment": "START",
+                      "spacingMode": "COLLAPSE_LISTS",
+                      "spaceAbove": {
+                        "magnitude": 4,
+                        "unit": "PT"
+                      },
+                      "direction": "LEFT_TO_RIGHT",
+                      "indentStart": {
+                        "unit": "PT"
+                      }
+                    },
+                    "bullet": {
+                      "nestingLevel": 3,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": "\u00e2\u20ac\u00a2",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 4,
+                  "startIndex": 3
+                },
+                {
+                  "textRun": {
+                    "style": {
+                      "bold": false,
+                      "fontFamily": "Roboto Condensed",
+                      "foregroundColor": {
+                        "opaqueColor": {
+                          "themeColor": "DARK1"
+                        }
+                      },
+                      "backgroundColor": {},
+                      "italic": false,
+                      "strikethrough": false,
+                      "fontSize": {
+                        "magnitude": 18,
+                        "unit": "PT"
+                      },
+                      "baselineOffset": "NONE",
+                      "underline": false,
+                      "smallCaps": false
+                    },
+                    "content": "\n"
+                  },
+                  "endIndex": 4,
+                  "startIndex": 3
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {
+                      "indentFirstLine": {
+                        "unit": "PT"
+                      },
+                      "spaceBelow": {
+                        "unit": "PT"
+                      },
+                      "lineSpacing": 100,
+                      "indentEnd": {
+                        "unit": "PT"
+                      },
+                      "alignment": "START",
+                      "spacingMode": "COLLAPSE_LISTS",
+                      "spaceAbove": {
+                        "magnitude": 4,
+                        "unit": "PT"
+                      },
+                      "direction": "LEFT_TO_RIGHT",
+                      "indentStart": {
+                        "unit": "PT"
+                      }
+                    },
+                    "bullet": {
+                      "nestingLevel": 4,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": "\u00e2\u2014\u2039",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 5,
+                  "startIndex": 4
+                },
+                {
+                  "textRun": {
+                    "style": {
+                      "bold": false,
+                      "fontFamily": "Roboto Condensed",
+                      "foregroundColor": {
+                        "opaqueColor": {
+                          "themeColor": "DARK1"
+                        }
+                      },
+                      "backgroundColor": {},
+                      "italic": false,
+                      "strikethrough": false,
+                      "fontSize": {
+                        "magnitude": 18,
+                        "unit": "PT"
+                      },
+                      "baselineOffset": "NONE",
+                      "underline": false,
+                      "smallCaps": false
+                    },
+                    "content": "\n"
+                  },
+                  "endIndex": 5,
+                  "startIndex": 4
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {
+                      "indentFirstLine": {
+                        "unit": "PT"
+                      },
+                      "spaceBelow": {
+                        "unit": "PT"
+                      },
+                      "lineSpacing": 100,
+                      "indentEnd": {
+                        "unit": "PT"
+                      },
+                      "alignment": "START",
+                      "spacingMode": "COLLAPSE_LISTS",
+                      "spaceAbove": {
+                        "magnitude": 4,
+                        "unit": "PT"
+                      },
+                      "direction": "LEFT_TO_RIGHT",
+                      "indentStart": {
+                        "unit": "PT"
+                      }
+                    },
+                    "bullet": {
+                      "nestingLevel": 5,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": "\u00e2\u2013\u00a0",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 6,
+                  "startIndex": 5
+                },
+                {
+                  "textRun": {
+                    "style": {
+                      "bold": false,
+                      "fontFamily": "Roboto Condensed",
+                      "foregroundColor": {
+                        "opaqueColor": {
+                          "themeColor": "DARK1"
+                        }
+                      },
+                      "backgroundColor": {},
+                      "italic": false,
+                      "strikethrough": false,
+                      "fontSize": {
+                        "magnitude": 18,
+                        "unit": "PT"
+                      },
+                      "baselineOffset": "NONE",
+                      "underline": false,
+                      "smallCaps": false
+                    },
+                    "content": "\n"
+                  },
+                  "endIndex": 6,
+                  "startIndex": 5
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {
+                      "indentFirstLine": {
+                        "unit": "PT"
+                      },
+                      "spaceBelow": {
+                        "unit": "PT"
+                      },
+                      "lineSpacing": 100,
+                      "indentEnd": {
+                        "unit": "PT"
+                      },
+                      "alignment": "START",
+                      "spacingMode": "COLLAPSE_LISTS",
+                      "spaceAbove": {
+                        "magnitude": 4,
+                        "unit": "PT"
+                      },
+                      "direction": "LEFT_TO_RIGHT",
+                      "indentStart": {
+                        "unit": "PT"
+                      }
+                    },
+                    "bullet": {
+                      "nestingLevel": 6,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": "\u00e2\u20ac\u00a2",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 7,
+                  "startIndex": 6
+                },
+                {
+                  "textRun": {
+                    "style": {
+                      "bold": false,
+                      "fontFamily": "Roboto Condensed",
+                      "foregroundColor": {
+                        "opaqueColor": {
+                          "themeColor": "DARK1"
+                        }
+                      },
+                      "backgroundColor": {},
+                      "italic": false,
+                      "strikethrough": false,
+                      "fontSize": {
+                        "magnitude": 18,
+                        "unit": "PT"
+                      },
+                      "baselineOffset": "NONE",
+                      "underline": false,
+                      "smallCaps": false
+                    },
+                    "content": "\n"
+                  },
+                  "endIndex": 7,
+                  "startIndex": 6
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {
+                      "indentFirstLine": {
+                        "unit": "PT"
+                      },
+                      "spaceBelow": {
+                        "unit": "PT"
+                      },
+                      "lineSpacing": 100,
+                      "indentEnd": {
+                        "unit": "PT"
+                      },
+                      "alignment": "START",
+                      "spacingMode": "COLLAPSE_LISTS",
+                      "spaceAbove": {
+                        "magnitude": 4,
+                        "unit": "PT"
+                      },
+                      "direction": "LEFT_TO_RIGHT",
+                      "indentStart": {
+                        "unit": "PT"
+                      }
+                    },
+                    "bullet": {
+                      "nestingLevel": 7,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": "\u00e2\u2014\u2039",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 8,
+                  "startIndex": 7
+                },
+                {
+                  "textRun": {
+                    "style": {
+                      "bold": false,
+                      "fontFamily": "Roboto Condensed",
+                      "foregroundColor": {
+                        "opaqueColor": {
+                          "themeColor": "DARK1"
+                        }
+                      },
+                      "backgroundColor": {},
+                      "italic": false,
+                      "strikethrough": false,
+                      "fontSize": {
+                        "magnitude": 18,
+                        "unit": "PT"
+                      },
+                      "baselineOffset": "NONE",
+                      "underline": false,
+                      "smallCaps": false
+                    },
+                    "content": "\n"
+                  },
+                  "endIndex": 8,
+                  "startIndex": 7
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {
+                      "indentFirstLine": {
+                        "unit": "PT"
+                      },
+                      "spaceBelow": {
+                        "unit": "PT"
+                      },
+                      "lineSpacing": 100,
+                      "indentEnd": {
+                        "unit": "PT"
+                      },
+                      "alignment": "START",
+                      "spacingMode": "COLLAPSE_LISTS",
+                      "spaceAbove": {
+                        "magnitude": 4,
+                        "unit": "PT"
+                      },
+                      "direction": "LEFT_TO_RIGHT",
+                      "indentStart": {
+                        "unit": "PT"
+                      }
+                    },
+                    "bullet": {
+                      "nestingLevel": 8,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": "\u00e2\u2013\u00a0",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 9,
+                  "startIndex": 8
+                },
+                {
+                  "textRun": {
+                    "style": {
+                      "bold": false,
+                      "fontFamily": "Roboto Condensed",
+                      "foregroundColor": {
+                        "opaqueColor": {
+                          "themeColor": "DARK1"
+                        }
+                      },
+                      "backgroundColor": {},
+                      "italic": false,
+                      "strikethrough": false,
+                      "fontSize": {
+                        "magnitude": 18,
+                        "unit": "PT"
+                      },
+                      "baselineOffset": "NONE",
+                      "underline": false,
+                      "smallCaps": false
+                    },
+                    "content": "\n"
+                  },
+                  "endIndex": 9,
+                  "startIndex": 8
+                }
+              ]
+            },
+            "shapeProperties": {
+              "shapeBackgroundFill": {
+                "propertyState": "NOT_RENDERED",
+                "solidFill": {
+                  "color": {
+                    "rgbColor": {
+                      "blue": 1,
+                      "green": 1,
+                      "red": 1
+                    }
+                  },
+                  "alpha": 1
+                }
+              },
+              "outline": {
+                "dashStyle": "SOLID",
+                "propertyState": "NOT_RENDERED",
+                "weight": {
+                  "magnitude": 9525,
+                  "unit": "EMU"
+                },
+                "outlineFill": {
+                  "solidFill": {
+                    "color": {
+                      "rgbColor": {}
+                    },
+                    "alpha": 1
+                  }
+                }
+              },
+              "shadow": {
+                "color": {
+                  "rgbColor": {}
+                },
+                "alpha": 1,
+                "blurRadius": {
+                  "unit": "EMU"
+                },
+                "type": "OUTER",
+                "transform": {
+                  "scaleY": 1,
+                  "scaleX": 1,
+                  "unit": "EMU"
+                },
+                "alignment": "BOTTOM_LEFT",
+                "propertyState": "NOT_RENDERED",
+                "rotateWithShape": false
+              }
+            },
+            "placeholder": {
+              "type": "BODY"
+            }
+          },
+          "transform": {
+            "translateX": 457200,
+            "scaleY": 1.2419,
+            "scaleX": 2.7432,
+            "translateY": 1200150,
+            "unit": "EMU"
+          },
+          "objectId": "p1_i3",
+          "size": {
+            "width": {
+              "magnitude": 3000000,
+              "unit": "EMU"
+            },
+            "height": {
+              "magnitude": 3000000,
+              "unit": "EMU"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "pageSize": {
+    "width": {
+      "magnitude": 18288000,
+      "unit": "EMU"
+    },
+    "height": {
+      "magnitude": 10287000,
+      "unit": "EMU"
+    }
+  },
+  "locale": "en",
+  "layouts": [
+    {
+      "layoutProperties": {
+        "masterObjectId": "simple-light",
+        "name": "TITLE",
+        "displayName": "Title slide"
+      },
+      "pageType": "LAYOUT",
+      "objectId": "p2",
+      "pageProperties": {
+        "pageBackgroundFill": {
+          "propertyState": "INHERIT"
+        }
+      },
+      "pageElements": [
+        {
+          "shape": {
+            "shapeType": "TEXT_BOX",
+            "text": {
+              "lists": {
+                "bodyPlaceholderListEntity": {
+                  "nestingLevel": {
+                    "8": {
+                      "bulletStyle": {
+                        "foregroundColor": {
+                          "opaqueColor": {
+                            "themeColor": "DARK2"
+                          }
+                        },
+                        "fontSize": {
+                          "magnitude": 30,
+                          "unit": "PT"
+                        }
+                      }
+                    },
+                    "6": {
+                      "bulletStyle": {
+                        "foregroundColor": {
+                          "opaqueColor": {
+                            "themeColor": "DARK2"
+                          }
+                        },
+                        "fontSize": {
+                          "magnitude": 30,
+                          "unit": "PT"
+                        }
+                      }
+                    },
+                    "0": {
+                      "bulletStyle": {
+                        "fontFamily": "Roboto Condensed",
+                        "foregroundColor": {
+                          "opaqueColor": {
+                            "themeColor": "DARK2"
+                          }
+                        }
+                      }
+                    },
+                    "7": {
+                      "bulletStyle": {
+                        "foregroundColor": {
+                          "opaqueColor": {
+                            "themeColor": "DARK2"
+                          }
+                        },
+                        "fontSize": {
+                          "magnitude": 30,
+                          "unit": "PT"
+                        }
+                      }
+                    },
+                    "1": {
+                      "bulletStyle": {
+                        "foregroundColor": {
+                          "opaqueColor": {
+                            "themeColor": "DARK2"
+                          }
+                        },
+                        "fontSize": {
+                          "magnitude": 30,
+                          "unit": "PT"
+                        }
+                      }
+                    },
+                    "2": {
+                      "bulletStyle": {
+                        "foregroundColor": {
+                          "opaqueColor": {
+                            "themeColor": "DARK2"
+                          }
+                        },
+                        "fontSize": {
+                          "magnitude": 30,
+                          "unit": "PT"
+                        }
+                      }
+                    },
+                    "4": {
+                      "bulletStyle": {
+                        "foregroundColor": {
+                          "opaqueColor": {
+                            "themeColor": "DARK2"
+                          }
+                        },
+                        "fontSize": {
+                          "magnitude": 30,
+                          "unit": "PT"
+                        }
+                      }
+                    },
+                    "5": {
+                      "bulletStyle": {
+                        "foregroundColor": {
+                          "opaqueColor": {
+                            "themeColor": "DARK2"
+                          }
+                        },
+                        "fontSize": {
+                          "magnitude": 30,
+                          "unit": "PT"
+                        }
+                      }
+                    },
+                    "3": {
+                      "bulletStyle": {
+                        "foregroundColor": {
+                          "opaqueColor": {
+                            "themeColor": "DARK2"
+                          }
+                        },
+                        "fontSize": {
+                          "magnitude": 30,
+                          "unit": "PT"
+                        }
+                      }
+                    }
+                  },
+                  "listId": "bodyPlaceholderListEntity"
+                }
+              },
+              "textElements": [
+                {
+                  "paragraphMarker": {
+                    "style": {
+                      "spaceAbove": {
+                        "unit": "PT"
+                      },
+                      "alignment": "CENTER"
+                    },
+                    "bullet": {
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": " ",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 1
+                },
+                {
+                  "textRun": {
+                    "style": {
+                      "fontFamily": "Roboto Condensed",
+                      "foregroundColor": {
+                        "opaqueColor": {
+                          "themeColor": "DARK2"
+                        }
+                      }
+                    },
+                    "content": "\n"
+                  },
+                  "endIndex": 1
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {
+                      "spaceAbove": {
+                        "unit": "PT"
+                      },
+                      "alignment": "CENTER"
+                    },
+                    "bullet": {
+                      "nestingLevel": 1,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": " ",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 2,
+                  "startIndex": 1
+                },
+                {
+                  "textRun": {
+                    "style": {
+                      "foregroundColor": {
+                        "opaqueColor": {
+                          "themeColor": "DARK2"
+                        }
+                      },
+                      "fontSize": {
+                        "magnitude": 30,
+                        "unit": "PT"
+                      }
+                    },
+                    "content": "\n"
+                  },
+                  "endIndex": 2,
+                  "startIndex": 1
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {
+                      "spaceAbove": {
+                        "unit": "PT"
+                      },
+                      "alignment": "CENTER"
+                    },
+                    "bullet": {
+                      "nestingLevel": 2,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": " ",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 3,
+                  "startIndex": 2
+                },
+                {
+                  "textRun": {
+                    "style": {
+                      "foregroundColor": {
+                        "opaqueColor": {
+                          "themeColor": "DARK2"
+                        }
+                      },
+                      "fontSize": {
+                        "magnitude": 30,
+                        "unit": "PT"
+                      }
+                    },
+                    "content": "\n"
+                  },
+                  "endIndex": 3,
+                  "startIndex": 2
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {
+                      "spaceAbove": {
+                        "unit": "PT"
+                      },
+                      "alignment": "CENTER"
+                    },
+                    "bullet": {
+                      "nestingLevel": 3,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": " ",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 4,
+                  "startIndex": 3
+                },
+                {
+                  "textRun": {
+                    "style": {
+                      "foregroundColor": {
+                        "opaqueColor": {
+                          "themeColor": "DARK2"
+                        }
+                      },
+                      "fontSize": {
+                        "magnitude": 30,
+                        "unit": "PT"
+                      }
+                    },
+                    "content": "\n"
+                  },
+                  "endIndex": 4,
+                  "startIndex": 3
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {
+                      "spaceAbove": {
+                        "unit": "PT"
+                      },
+                      "alignment": "CENTER"
+                    },
+                    "bullet": {
+                      "nestingLevel": 4,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": " ",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 5,
+                  "startIndex": 4
+                },
+                {
+                  "textRun": {
+                    "style": {
+                      "foregroundColor": {
+                        "opaqueColor": {
+                          "themeColor": "DARK2"
+                        }
+                      },
+                      "fontSize": {
+                        "magnitude": 30,
+                        "unit": "PT"
+                      }
+                    },
+                    "content": "\n"
+                  },
+                  "endIndex": 5,
+                  "startIndex": 4
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {
+                      "spaceAbove": {
+                        "unit": "PT"
+                      },
+                      "alignment": "CENTER"
+                    },
+                    "bullet": {
+                      "nestingLevel": 5,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": " ",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 6,
+                  "startIndex": 5
+                },
+                {
+                  "textRun": {
+                    "style": {
+                      "foregroundColor": {
+                        "opaqueColor": {
+                          "themeColor": "DARK2"
+                        }
+                      },
+                      "fontSize": {
+                        "magnitude": 30,
+                        "unit": "PT"
+                      }
+                    },
+                    "content": "\n"
+                  },
+                  "endIndex": 6,
+                  "startIndex": 5
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {
+                      "spaceAbove": {
+                        "unit": "PT"
+                      },
+                      "alignment": "CENTER"
+                    },
+                    "bullet": {
+                      "nestingLevel": 6,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": " ",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 7,
+                  "startIndex": 6
+                },
+                {
+                  "textRun": {
+                    "style": {
+                      "foregroundColor": {
+                        "opaqueColor": {
+                          "themeColor": "DARK2"
+                        }
+                      },
+                      "fontSize": {
+                        "magnitude": 30,
+                        "unit": "PT"
+                      }
+                    },
+                    "content": "\n"
+                  },
+                  "endIndex": 7,
+                  "startIndex": 6
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {
+                      "spaceAbove": {
+                        "unit": "PT"
+                      },
+                      "alignment": "CENTER"
+                    },
+                    "bullet": {
+                      "nestingLevel": 7,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": " ",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 8,
+                  "startIndex": 7
+                },
+                {
+                  "textRun": {
+                    "style": {
+                      "foregroundColor": {
+                        "opaqueColor": {
+                          "themeColor": "DARK2"
+                        }
+                      },
+                      "fontSize": {
+                        "magnitude": 30,
+                        "unit": "PT"
+                      }
+                    },
+                    "content": "\n"
+                  },
+                  "endIndex": 8,
+                  "startIndex": 7
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {
+                      "spaceAbove": {
+                        "unit": "PT"
+                      },
+                      "alignment": "CENTER"
+                    },
+                    "bullet": {
+                      "nestingLevel": 8,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": " ",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 9,
+                  "startIndex": 8
+                },
+                {
+                  "textRun": {
+                    "style": {
+                      "foregroundColor": {
+                        "opaqueColor": {
+                          "themeColor": "DARK2"
+                        }
+                      },
+                      "fontSize": {
+                        "magnitude": 30,
+                        "unit": "PT"
+                      }
+                    },
+                    "content": "\n"
+                  },
+                  "endIndex": 9,
+                  "startIndex": 8
+                }
+              ]
+            },
+            "shapeProperties": {
+              "shapeBackgroundFill": {
+                "propertyState": "INHERIT"
+              },
+              "outline": {
+                "propertyState": "INHERIT"
+              },
+              "shadow": {
+                "propertyState": "INHERIT"
+              }
+            },
+            "placeholder": {
+              "type": "SUBTITLE",
+              "parentObjectId": "p1_i3"
+            }
+          },
+          "transform": {
+            "translateX": 685800,
+            "scaleY": 0.2616,
+            "scaleX": 2.5908,
+            "translateY": 2840053.515,
+            "unit": "EMU"
+          },
+          "objectId": "p2_i6",
+          "size": {
+            "width": {
+              "magnitude": 3000000,
+              "unit": "EMU"
+            },
+            "height": {
+              "magnitude": 3000000,
+              "unit": "EMU"
+            }
+          }
+        },
+        {
+          "shape": {
+            "shapeType": "TEXT_BOX",
+            "text": {
+              "textElements": [
+                {
+                  "paragraphMarker": {
+                    "style": {
+                      "indentFirstLine": {
+                        "magnitude": 36,
+                        "unit": "PT"
+                      },
+                      "spaceBelow": {
+                        "unit": "PT"
+                      },
+                      "lineSpacing": 100,
+                      "indentEnd": {
+                        "unit": "PT"
+                      },
+                      "alignment": "START",
+                      "spacingMode": "COLLAPSE_LISTS",
+                      "spaceAbove": {
+                        "unit": "PT"
+                      },
+                      "direction": "LEFT_TO_RIGHT",
+                      "indentStart": {
+                        "unit": "PT"
+                      }
+                    }
+                  },
+                  "endIndex": 9
+                },
+                {
+                  "textRun": {
+                    "style": {
+                      "bold": false,
+                      "fontFamily": "Arial",
+                      "foregroundColor": {
+                        "opaqueColor": {
+                          "rgbColor": {
+                            "blue": 0.9372549,
+                            "green": 0.9372549,
+                            "red": 0.9372549
+                          }
+                        }
+                      },
+                      "backgroundColor": {},
+                      "italic": false,
+                      "strikethrough": false,
+                      "fontSize": {
+                        "magnitude": 14,
+                        "unit": "PT"
+                      },
+                      "baselineOffset": "NONE",
+                      "underline": false,
+                      "smallCaps": false
+                    },
+                    "content": "Minerals\n"
+                  },
+                  "endIndex": 9
+                }
+              ]
+            },
+            "shapeProperties": {
+              "shapeBackgroundFill": {
+                "propertyState": "NOT_RENDERED",
+                "solidFill": {
+                  "color": {
+                    "rgbColor": {
+                      "blue": 1,
+                      "green": 1,
+                      "red": 1
+                    }
+                  },
+                  "alpha": 1
+                }
+              },
+              "outline": {
+                "dashStyle": "SOLID",
+                "propertyState": "NOT_RENDERED",
+                "weight": {
+                  "magnitude": 9525,
+                  "unit": "EMU"
+                },
+                "outlineFill": {
+                  "solidFill": {
+                    "color": {
+                      "rgbColor": {}
+                    },
+                    "alpha": 1
+                  }
+                }
+              },
+              "shadow": {
+                "color": {
+                  "rgbColor": {}
+                },
+                "alpha": 1,
+                "blurRadius": {
+                  "unit": "EMU"
+                },
+                "type": "OUTER",
+                "transform": {
+                  "scaleY": 1,
+                  "scaleX": 1,
+                  "unit": "EMU"
+                },
+                "alignment": "BOTTOM_LEFT",
+                "propertyState": "NOT_RENDERED",
+                "rotateWithShape": false
+              }
+            }
+          },
+          "transform": {
+            "translateY": -0.29,
+            "scaleY": 0.2616,
+            "scaleX": 2.5908,
+            "unit": "EMU"
+          },
+          "objectId": "g42ead12d3_0135",
+          "size": {
+            "width": {
+              "magnitude": 3000000,
+              "unit": "EMU"
+            },
+            "height": {
+              "magnitude": 3000000,
+              "unit": "EMU"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "layoutProperties": {
+        "masterObjectId": "simple-light",
+        "name": "TITLE_AND_BODY",
+        "displayName": "Title and body"
+      },
+      "pageType": "LAYOUT",
+      "objectId": "p3",
+      "pageProperties": {
+        "pageBackgroundFill": {
+          "propertyState": "INHERIT"
+        }
+      },
+      "pageElements": [
+        {
+          "shape": {
+            "shapeType": "TEXT_BOX",
+            "text": {
+              "lists": {
+                "bodyPlaceholderListEntity": {
+                  "nestingLevel": {
+                    "8": {
+                      "bulletStyle": {}
+                    },
+                    "6": {
+                      "bulletStyle": {}
+                    },
+                    "0": {
+                      "bulletStyle": {}
+                    },
+                    "7": {
+                      "bulletStyle": {}
+                    },
+                    "1": {
+                      "bulletStyle": {}
+                    },
+                    "2": {
+                      "bulletStyle": {}
+                    },
+                    "4": {
+                      "bulletStyle": {}
+                    },
+                    "5": {
+                      "bulletStyle": {}
+                    },
+                    "3": {
+                      "bulletStyle": {}
+                    }
+                  },
+                  "listId": "bodyPlaceholderListEntity"
+                }
+              },
+              "textElements": [
+                {
+                  "paragraphMarker": {
+                    "style": {},
+                    "bullet": {
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": " ",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 1
+                },
+                {
+                  "textRun": {
+                    "style": {},
+                    "content": "\n"
+                  },
+                  "endIndex": 1
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {},
+                    "bullet": {
+                      "nestingLevel": 1,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": " ",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 2,
+                  "startIndex": 1
+                },
+                {
+                  "textRun": {
+                    "style": {},
+                    "content": "\n"
+                  },
+                  "endIndex": 2,
+                  "startIndex": 1
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {},
+                    "bullet": {
+                      "nestingLevel": 2,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": " ",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 3,
+                  "startIndex": 2
+                },
+                {
+                  "textRun": {
+                    "style": {},
+                    "content": "\n"
+                  },
+                  "endIndex": 3,
+                  "startIndex": 2
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {},
+                    "bullet": {
+                      "nestingLevel": 3,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": " ",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 4,
+                  "startIndex": 3
+                },
+                {
+                  "textRun": {
+                    "style": {},
+                    "content": "\n"
+                  },
+                  "endIndex": 4,
+                  "startIndex": 3
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {},
+                    "bullet": {
+                      "nestingLevel": 4,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": " ",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 5,
+                  "startIndex": 4
+                },
+                {
+                  "textRun": {
+                    "style": {},
+                    "content": "\n"
+                  },
+                  "endIndex": 5,
+                  "startIndex": 4
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {},
+                    "bullet": {
+                      "nestingLevel": 5,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": " ",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 6,
+                  "startIndex": 5
+                },
+                {
+                  "textRun": {
+                    "style": {},
+                    "content": "\n"
+                  },
+                  "endIndex": 6,
+                  "startIndex": 5
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {},
+                    "bullet": {
+                      "nestingLevel": 6,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": " ",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 7,
+                  "startIndex": 6
+                },
+                {
+                  "textRun": {
+                    "style": {},
+                    "content": "\n"
+                  },
+                  "endIndex": 7,
+                  "startIndex": 6
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {},
+                    "bullet": {
+                      "nestingLevel": 7,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": " ",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 8,
+                  "startIndex": 7
+                },
+                {
+                  "textRun": {
+                    "style": {},
+                    "content": "\n"
+                  },
+                  "endIndex": 8,
+                  "startIndex": 7
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {},
+                    "bullet": {
+                      "nestingLevel": 8,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": " ",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 9,
+                  "startIndex": 8
+                },
+                {
+                  "textRun": {
+                    "style": {},
+                    "content": "\n"
+                  },
+                  "endIndex": 9,
+                  "startIndex": 8
+                }
+              ]
+            },
+            "shapeProperties": {
+              "shapeBackgroundFill": {
+                "propertyState": "INHERIT"
+              },
+              "outline": {
+                "propertyState": "INHERIT"
+              },
+              "shadow": {
+                "propertyState": "INHERIT"
+              }
+            },
+            "placeholder": {
+              "type": "TITLE",
+              "parentObjectId": "p1_i2"
+            }
+          },
+          "transform": {
+            "translateX": 457200,
+            "scaleY": 0.2858,
+            "scaleX": 2.7432,
+            "translateY": 205978.49000000002,
+            "unit": "EMU"
+          },
+          "objectId": "p3_i2",
+          "size": {
+            "width": {
+              "magnitude": 3000000,
+              "unit": "EMU"
+            },
+            "height": {
+              "magnitude": 3000000,
+              "unit": "EMU"
+            }
+          }
+        },
+        {
+          "shape": {
+            "shapeType": "TEXT_BOX",
+            "text": {
+              "lists": {
+                "bodyPlaceholderListEntity": {
+                  "nestingLevel": {
+                    "8": {
+                      "bulletStyle": {}
+                    },
+                    "6": {
+                      "bulletStyle": {}
+                    },
+                    "0": {
+                      "bulletStyle": {}
+                    },
+                    "7": {
+                      "bulletStyle": {}
+                    },
+                    "1": {
+                      "bulletStyle": {}
+                    },
+                    "2": {
+                      "bulletStyle": {}
+                    },
+                    "4": {
+                      "bulletStyle": {}
+                    },
+                    "5": {
+                      "bulletStyle": {}
+                    },
+                    "3": {
+                      "bulletStyle": {}
+                    }
+                  },
+                  "listId": "bodyPlaceholderListEntity"
+                }
+              },
+              "textElements": [
+                {
+                  "paragraphMarker": {
+                    "style": {},
+                    "bullet": {
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": "\u00e2\u20ac\u00a2",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 1
+                },
+                {
+                  "textRun": {
+                    "style": {},
+                    "content": "\n"
+                  },
+                  "endIndex": 1
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {},
+                    "bullet": {
+                      "nestingLevel": 1,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": "\u00e2\u2014\u2039",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 2,
+                  "startIndex": 1
+                },
+                {
+                  "textRun": {
+                    "style": {},
+                    "content": "\n"
+                  },
+                  "endIndex": 2,
+                  "startIndex": 1
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {},
+                    "bullet": {
+                      "nestingLevel": 2,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": "\u00e2\u2013\u00a0",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 3,
+                  "startIndex": 2
+                },
+                {
+                  "textRun": {
+                    "style": {},
+                    "content": "\n"
+                  },
+                  "endIndex": 3,
+                  "startIndex": 2
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {},
+                    "bullet": {
+                      "nestingLevel": 3,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": "\u00e2\u20ac\u00a2",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 4,
+                  "startIndex": 3
+                },
+                {
+                  "textRun": {
+                    "style": {},
+                    "content": "\n"
+                  },
+                  "endIndex": 4,
+                  "startIndex": 3
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {},
+                    "bullet": {
+                      "nestingLevel": 4,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": "\u00e2\u2014\u2039",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 5,
+                  "startIndex": 4
+                },
+                {
+                  "textRun": {
+                    "style": {},
+                    "content": "\n"
+                  },
+                  "endIndex": 5,
+                  "startIndex": 4
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {},
+                    "bullet": {
+                      "nestingLevel": 5,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": "\u00e2\u2013\u00a0",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 6,
+                  "startIndex": 5
+                },
+                {
+                  "textRun": {
+                    "style": {},
+                    "content": "\n"
+                  },
+                  "endIndex": 6,
+                  "startIndex": 5
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {},
+                    "bullet": {
+                      "nestingLevel": 6,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": "\u00e2\u20ac\u00a2",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 7,
+                  "startIndex": 6
+                },
+                {
+                  "textRun": {
+                    "style": {},
+                    "content": "\n"
+                  },
+                  "endIndex": 7,
+                  "startIndex": 6
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {},
+                    "bullet": {
+                      "nestingLevel": 7,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": "\u00e2\u2014\u2039",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 8,
+                  "startIndex": 7
+                },
+                {
+                  "textRun": {
+                    "style": {},
+                    "content": "\n"
+                  },
+                  "endIndex": 8,
+                  "startIndex": 7
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {},
+                    "bullet": {
+                      "nestingLevel": 8,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": "\u00e2\u2013\u00a0",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 9,
+                  "startIndex": 8
+                },
+                {
+                  "textRun": {
+                    "style": {},
+                    "content": "\n"
+                  },
+                  "endIndex": 9,
+                  "startIndex": 8
+                }
+              ]
+            },
+            "shapeProperties": {
+              "shapeBackgroundFill": {
+                "propertyState": "INHERIT"
+              },
+              "outline": {
+                "propertyState": "INHERIT"
+              },
+              "shadow": {
+                "propertyState": "INHERIT"
+              }
+            },
+            "placeholder": {
+              "type": "BODY",
+              "parentObjectId": "p1_i3"
+            }
+          },
+          "transform": {
+            "translateX": 457200,
+            "scaleY": 1.2419,
+            "scaleX": 2.7432,
+            "translateY": 1200150,
+            "unit": "EMU"
+          },
+          "objectId": "p3_i3",
+          "size": {
+            "width": {
+              "magnitude": 3000000,
+              "unit": "EMU"
+            },
+            "height": {
+              "magnitude": 3000000,
+              "unit": "EMU"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "layoutProperties": {
+        "masterObjectId": "simple-light",
+        "name": "TITLE_AND_TWO_COLUMNS",
+        "displayName": "Title and two columns"
+      },
+      "pageType": "LAYOUT",
+      "objectId": "p4",
+      "pageProperties": {
+        "pageBackgroundFill": {
+          "propertyState": "INHERIT"
+        }
+      },
+      "pageElements": [
+        {
+          "shape": {
+            "shapeType": "TEXT_BOX",
+            "text": {
+              "lists": {
+                "bodyPlaceholderListEntity": {
+                  "nestingLevel": {
+                    "8": {
+                      "bulletStyle": {}
+                    },
+                    "6": {
+                      "bulletStyle": {}
+                    },
+                    "0": {
+                      "bulletStyle": {}
+                    },
+                    "7": {
+                      "bulletStyle": {}
+                    },
+                    "1": {
+                      "bulletStyle": {}
+                    },
+                    "2": {
+                      "bulletStyle": {}
+                    },
+                    "4": {
+                      "bulletStyle": {}
+                    },
+                    "5": {
+                      "bulletStyle": {}
+                    },
+                    "3": {
+                      "bulletStyle": {}
+                    }
+                  },
+                  "listId": "bodyPlaceholderListEntity"
+                }
+              },
+              "textElements": [
+                {
+                  "paragraphMarker": {
+                    "style": {},
+                    "bullet": {
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": " ",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 1
+                },
+                {
+                  "textRun": {
+                    "style": {},
+                    "content": "\n"
+                  },
+                  "endIndex": 1
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {},
+                    "bullet": {
+                      "nestingLevel": 1,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": " ",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 2,
+                  "startIndex": 1
+                },
+                {
+                  "textRun": {
+                    "style": {},
+                    "content": "\n"
+                  },
+                  "endIndex": 2,
+                  "startIndex": 1
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {},
+                    "bullet": {
+                      "nestingLevel": 2,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": " ",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 3,
+                  "startIndex": 2
+                },
+                {
+                  "textRun": {
+                    "style": {},
+                    "content": "\n"
+                  },
+                  "endIndex": 3,
+                  "startIndex": 2
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {},
+                    "bullet": {
+                      "nestingLevel": 3,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": " ",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 4,
+                  "startIndex": 3
+                },
+                {
+                  "textRun": {
+                    "style": {},
+                    "content": "\n"
+                  },
+                  "endIndex": 4,
+                  "startIndex": 3
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {},
+                    "bullet": {
+                      "nestingLevel": 4,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": " ",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 5,
+                  "startIndex": 4
+                },
+                {
+                  "textRun": {
+                    "style": {},
+                    "content": "\n"
+                  },
+                  "endIndex": 5,
+                  "startIndex": 4
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {},
+                    "bullet": {
+                      "nestingLevel": 5,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": " ",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 6,
+                  "startIndex": 5
+                },
+                {
+                  "textRun": {
+                    "style": {},
+                    "content": "\n"
+                  },
+                  "endIndex": 6,
+                  "startIndex": 5
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {},
+                    "bullet": {
+                      "nestingLevel": 6,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": " ",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 7,
+                  "startIndex": 6
+                },
+                {
+                  "textRun": {
+                    "style": {},
+                    "content": "\n"
+                  },
+                  "endIndex": 7,
+                  "startIndex": 6
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {},
+                    "bullet": {
+                      "nestingLevel": 7,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": " ",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 8,
+                  "startIndex": 7
+                },
+                {
+                  "textRun": {
+                    "style": {},
+                    "content": "\n"
+                  },
+                  "endIndex": 8,
+                  "startIndex": 7
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {},
+                    "bullet": {
+                      "nestingLevel": 8,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": " ",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 9,
+                  "startIndex": 8
+                },
+                {
+                  "textRun": {
+                    "style": {},
+                    "content": "\n"
+                  },
+                  "endIndex": 9,
+                  "startIndex": 8
+                }
+              ]
+            },
+            "shapeProperties": {
+              "shapeBackgroundFill": {
+                "propertyState": "INHERIT"
+              },
+              "outline": {
+                "propertyState": "INHERIT"
+              },
+              "shadow": {
+                "propertyState": "INHERIT"
+              }
+            },
+            "placeholder": {
+              "type": "TITLE",
+              "parentObjectId": "p1_i2"
+            }
+          },
+          "transform": {
+            "translateX": 457200,
+            "scaleY": 0.2858,
+            "scaleX": 2.7432,
+            "translateY": 205978.49000000002,
+            "unit": "EMU"
+          },
+          "objectId": "p4_i2",
+          "size": {
+            "width": {
+              "magnitude": 3000000,
+              "unit": "EMU"
+            },
+            "height": {
+              "magnitude": 3000000,
+              "unit": "EMU"
+            }
+          }
+        },
+        {
+          "shape": {
+            "shapeType": "TEXT_BOX",
+            "text": {
+              "lists": {
+                "bodyPlaceholderListEntity": {
+                  "nestingLevel": {
+                    "8": {
+                      "bulletStyle": {}
+                    },
+                    "6": {
+                      "bulletStyle": {}
+                    },
+                    "0": {
+                      "bulletStyle": {}
+                    },
+                    "7": {
+                      "bulletStyle": {}
+                    },
+                    "1": {
+                      "bulletStyle": {}
+                    },
+                    "2": {
+                      "bulletStyle": {}
+                    },
+                    "4": {
+                      "bulletStyle": {}
+                    },
+                    "5": {
+                      "bulletStyle": {}
+                    },
+                    "3": {
+                      "bulletStyle": {}
+                    }
+                  },
+                  "listId": "bodyPlaceholderListEntity"
+                }
+              },
+              "textElements": [
+                {
+                  "paragraphMarker": {
+                    "style": {},
+                    "bullet": {
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": "\u00e2\u20ac\u00a2",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 1
+                },
+                {
+                  "textRun": {
+                    "style": {},
+                    "content": "\n"
+                  },
+                  "endIndex": 1
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {},
+                    "bullet": {
+                      "nestingLevel": 1,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": "\u00e2\u2014\u2039",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 2,
+                  "startIndex": 1
+                },
+                {
+                  "textRun": {
+                    "style": {},
+                    "content": "\n"
+                  },
+                  "endIndex": 2,
+                  "startIndex": 1
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {},
+                    "bullet": {
+                      "nestingLevel": 2,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": "\u00e2\u2013\u00a0",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 3,
+                  "startIndex": 2
+                },
+                {
+                  "textRun": {
+                    "style": {},
+                    "content": "\n"
+                  },
+                  "endIndex": 3,
+                  "startIndex": 2
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {},
+                    "bullet": {
+                      "nestingLevel": 3,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": "\u00e2\u20ac\u00a2",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 4,
+                  "startIndex": 3
+                },
+                {
+                  "textRun": {
+                    "style": {},
+                    "content": "\n"
+                  },
+                  "endIndex": 4,
+                  "startIndex": 3
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {},
+                    "bullet": {
+                      "nestingLevel": 4,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": "\u00e2\u2014\u2039",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 5,
+                  "startIndex": 4
+                },
+                {
+                  "textRun": {
+                    "style": {},
+                    "content": "\n"
+                  },
+                  "endIndex": 5,
+                  "startIndex": 4
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {},
+                    "bullet": {
+                      "nestingLevel": 5,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": "\u00e2\u2013\u00a0",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 6,
+                  "startIndex": 5
+                },
+                {
+                  "textRun": {
+                    "style": {},
+                    "content": "\n"
+                  },
+                  "endIndex": 6,
+                  "startIndex": 5
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {},
+                    "bullet": {
+                      "nestingLevel": 6,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": "\u00e2\u20ac\u00a2",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 7,
+                  "startIndex": 6
+                },
+                {
+                  "textRun": {
+                    "style": {},
+                    "content": "\n"
+                  },
+                  "endIndex": 7,
+                  "startIndex": 6
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {},
+                    "bullet": {
+                      "nestingLevel": 7,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": "\u00e2\u2014\u2039",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 8,
+                  "startIndex": 7
+                },
+                {
+                  "textRun": {
+                    "style": {},
+                    "content": "\n"
+                  },
+                  "endIndex": 8,
+                  "startIndex": 7
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {},
+                    "bullet": {
+                      "nestingLevel": 8,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": "\u00e2\u2013\u00a0",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 9,
+                  "startIndex": 8
+                },
+                {
+                  "textRun": {
+                    "style": {},
+                    "content": "\n"
+                  },
+                  "endIndex": 9,
+                  "startIndex": 8
+                }
+              ]
+            },
+            "shapeProperties": {
+              "shapeBackgroundFill": {
+                "propertyState": "INHERIT"
+              },
+              "outline": {
+                "propertyState": "INHERIT"
+              },
+              "shadow": {
+                "propertyState": "INHERIT"
+              }
+            },
+            "placeholder": {
+              "type": "BODY",
+              "parentObjectId": "p1_i3"
+            }
+          },
+          "transform": {
+            "translateX": 457200,
+            "scaleY": 1.2419,
+            "scaleX": 1.3315,
+            "translateY": 1200150,
+            "unit": "EMU"
+          },
+          "objectId": "p4_i8",
+          "size": {
+            "width": {
+              "magnitude": 3000000,
+              "unit": "EMU"
+            },
+            "height": {
+              "magnitude": 3000000,
+              "unit": "EMU"
+            }
+          }
+        },
+        {
+          "shape": {
+            "shapeType": "TEXT_BOX",
+            "text": {
+              "lists": {
+                "bodyPlaceholderListEntity": {
+                  "nestingLevel": {
+                    "8": {
+                      "bulletStyle": {}
+                    },
+                    "6": {
+                      "bulletStyle": {}
+                    },
+                    "0": {
+                      "bulletStyle": {}
+                    },
+                    "7": {
+                      "bulletStyle": {}
+                    },
+                    "1": {
+                      "bulletStyle": {}
+                    },
+                    "2": {
+                      "bulletStyle": {}
+                    },
+                    "4": {
+                      "bulletStyle": {}
+                    },
+                    "5": {
+                      "bulletStyle": {}
+                    },
+                    "3": {
+                      "bulletStyle": {}
+                    }
+                  },
+                  "listId": "bodyPlaceholderListEntity"
+                }
+              },
+              "textElements": [
+                {
+                  "paragraphMarker": {
+                    "style": {},
+                    "bullet": {
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": "\u00e2\u20ac\u00a2",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 1
+                },
+                {
+                  "textRun": {
+                    "style": {},
+                    "content": "\n"
+                  },
+                  "endIndex": 1
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {},
+                    "bullet": {
+                      "nestingLevel": 1,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": "\u00e2\u2014\u2039",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 2,
+                  "startIndex": 1
+                },
+                {
+                  "textRun": {
+                    "style": {},
+                    "content": "\n"
+                  },
+                  "endIndex": 2,
+                  "startIndex": 1
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {},
+                    "bullet": {
+                      "nestingLevel": 2,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": "\u00e2\u2013\u00a0",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 3,
+                  "startIndex": 2
+                },
+                {
+                  "textRun": {
+                    "style": {},
+                    "content": "\n"
+                  },
+                  "endIndex": 3,
+                  "startIndex": 2
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {},
+                    "bullet": {
+                      "nestingLevel": 3,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": "\u00e2\u20ac\u00a2",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 4,
+                  "startIndex": 3
+                },
+                {
+                  "textRun": {
+                    "style": {},
+                    "content": "\n"
+                  },
+                  "endIndex": 4,
+                  "startIndex": 3
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {},
+                    "bullet": {
+                      "nestingLevel": 4,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": "\u00e2\u2014\u2039",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 5,
+                  "startIndex": 4
+                },
+                {
+                  "textRun": {
+                    "style": {},
+                    "content": "\n"
+                  },
+                  "endIndex": 5,
+                  "startIndex": 4
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {},
+                    "bullet": {
+                      "nestingLevel": 5,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": "\u00e2\u2013\u00a0",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 6,
+                  "startIndex": 5
+                },
+                {
+                  "textRun": {
+                    "style": {},
+                    "content": "\n"
+                  },
+                  "endIndex": 6,
+                  "startIndex": 5
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {},
+                    "bullet": {
+                      "nestingLevel": 6,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": "\u00e2\u20ac\u00a2",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 7,
+                  "startIndex": 6
+                },
+                {
+                  "textRun": {
+                    "style": {},
+                    "content": "\n"
+                  },
+                  "endIndex": 7,
+                  "startIndex": 6
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {},
+                    "bullet": {
+                      "nestingLevel": 7,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": "\u00e2\u2014\u2039",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 8,
+                  "startIndex": 7
+                },
+                {
+                  "textRun": {
+                    "style": {},
+                    "content": "\n"
+                  },
+                  "endIndex": 8,
+                  "startIndex": 7
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {},
+                    "bullet": {
+                      "nestingLevel": 8,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": "\u00e2\u2013\u00a0",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 9,
+                  "startIndex": 8
+                },
+                {
+                  "textRun": {
+                    "style": {},
+                    "content": "\n"
+                  },
+                  "endIndex": 9,
+                  "startIndex": 8
+                }
+              ]
+            },
+            "shapeProperties": {
+              "shapeBackgroundFill": {
+                "propertyState": "INHERIT"
+              },
+              "outline": {
+                "propertyState": "INHERIT"
+              },
+              "shadow": {
+                "propertyState": "INHERIT"
+              }
+            },
+            "placeholder": {
+              "index": 1,
+              "type": "BODY",
+              "parentObjectId": "p1_i3"
+            }
+          },
+          "transform": {
+            "translateX": 4692273.827500001,
+            "scaleY": 1.2419,
+            "scaleX": 1.3315,
+            "translateY": 1200150,
+            "unit": "EMU"
+          },
+          "objectId": "p4_i9",
+          "size": {
+            "width": {
+              "magnitude": 3000000,
+              "unit": "EMU"
+            },
+            "height": {
+              "magnitude": 3000000,
+              "unit": "EMU"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "layoutProperties": {
+        "masterObjectId": "simple-light",
+        "name": "TITLE_ONLY",
+        "displayName": "Title only"
+      },
+      "pageType": "LAYOUT",
+      "objectId": "p5",
+      "pageProperties": {
+        "pageBackgroundFill": {
+          "propertyState": "INHERIT"
+        }
+      },
+      "pageElements": [
+        {
+          "shape": {
+            "shapeType": "TEXT_BOX",
+            "text": {
+              "lists": {
+                "bodyPlaceholderListEntity": {
+                  "nestingLevel": {
+                    "8": {
+                      "bulletStyle": {
+                        "foregroundColor": {
+                          "opaqueColor": {
+                            "rgbColor": {
+                              "blue": 0.9372549,
+                              "green": 0.9372549,
+                              "red": 0.9372549
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "6": {
+                      "bulletStyle": {
+                        "foregroundColor": {
+                          "opaqueColor": {
+                            "rgbColor": {
+                              "blue": 0.9372549,
+                              "green": 0.9372549,
+                              "red": 0.9372549
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "0": {
+                      "bulletStyle": {
+                        "foregroundColor": {
+                          "opaqueColor": {
+                            "rgbColor": {
+                              "blue": 0.9372549,
+                              "green": 0.9372549,
+                              "red": 0.9372549
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "7": {
+                      "bulletStyle": {
+                        "foregroundColor": {
+                          "opaqueColor": {
+                            "rgbColor": {
+                              "blue": 0.9372549,
+                              "green": 0.9372549,
+                              "red": 0.9372549
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "1": {
+                      "bulletStyle": {
+                        "foregroundColor": {
+                          "opaqueColor": {
+                            "rgbColor": {
+                              "blue": 0.9372549,
+                              "green": 0.9372549,
+                              "red": 0.9372549
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "2": {
+                      "bulletStyle": {
+                        "foregroundColor": {
+                          "opaqueColor": {
+                            "rgbColor": {
+                              "blue": 0.9372549,
+                              "green": 0.9372549,
+                              "red": 0.9372549
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "4": {
+                      "bulletStyle": {
+                        "foregroundColor": {
+                          "opaqueColor": {
+                            "rgbColor": {
+                              "blue": 0.9372549,
+                              "green": 0.9372549,
+                              "red": 0.9372549
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "5": {
+                      "bulletStyle": {
+                        "foregroundColor": {
+                          "opaqueColor": {
+                            "rgbColor": {
+                              "blue": 0.9372549,
+                              "green": 0.9372549,
+                              "red": 0.9372549
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "3": {
+                      "bulletStyle": {
+                        "foregroundColor": {
+                          "opaqueColor": {
+                            "rgbColor": {
+                              "blue": 0.9372549,
+                              "green": 0.9372549,
+                              "red": 0.9372549
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "listId": "bodyPlaceholderListEntity"
+                }
+              },
+              "textElements": [
+                {
+                  "paragraphMarker": {
+                    "style": {},
+                    "bullet": {
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": " ",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 1
+                },
+                {
+                  "textRun": {
+                    "style": {
+                      "foregroundColor": {
+                        "opaqueColor": {
+                          "rgbColor": {
+                            "blue": 0.9372549,
+                            "green": 0.9372549,
+                            "red": 0.9372549
+                          }
+                        }
+                      }
+                    },
+                    "content": "\n"
+                  },
+                  "endIndex": 1
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {},
+                    "bullet": {
+                      "nestingLevel": 1,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": " ",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 2,
+                  "startIndex": 1
+                },
+                {
+                  "textRun": {
+                    "style": {
+                      "foregroundColor": {
+                        "opaqueColor": {
+                          "rgbColor": {
+                            "blue": 0.9372549,
+                            "green": 0.9372549,
+                            "red": 0.9372549
+                          }
+                        }
+                      }
+                    },
+                    "content": "\n"
+                  },
+                  "endIndex": 2,
+                  "startIndex": 1
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {},
+                    "bullet": {
+                      "nestingLevel": 2,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": " ",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 3,
+                  "startIndex": 2
+                },
+                {
+                  "textRun": {
+                    "style": {
+                      "foregroundColor": {
+                        "opaqueColor": {
+                          "rgbColor": {
+                            "blue": 0.9372549,
+                            "green": 0.9372549,
+                            "red": 0.9372549
+                          }
+                        }
+                      }
+                    },
+                    "content": "\n"
+                  },
+                  "endIndex": 3,
+                  "startIndex": 2
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {},
+                    "bullet": {
+                      "nestingLevel": 3,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": " ",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 4,
+                  "startIndex": 3
+                },
+                {
+                  "textRun": {
+                    "style": {
+                      "foregroundColor": {
+                        "opaqueColor": {
+                          "rgbColor": {
+                            "blue": 0.9372549,
+                            "green": 0.9372549,
+                            "red": 0.9372549
+                          }
+                        }
+                      }
+                    },
+                    "content": "\n"
+                  },
+                  "endIndex": 4,
+                  "startIndex": 3
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {},
+                    "bullet": {
+                      "nestingLevel": 4,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": " ",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 5,
+                  "startIndex": 4
+                },
+                {
+                  "textRun": {
+                    "style": {
+                      "foregroundColor": {
+                        "opaqueColor": {
+                          "rgbColor": {
+                            "blue": 0.9372549,
+                            "green": 0.9372549,
+                            "red": 0.9372549
+                          }
+                        }
+                      }
+                    },
+                    "content": "\n"
+                  },
+                  "endIndex": 5,
+                  "startIndex": 4
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {},
+                    "bullet": {
+                      "nestingLevel": 5,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": " ",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 6,
+                  "startIndex": 5
+                },
+                {
+                  "textRun": {
+                    "style": {
+                      "foregroundColor": {
+                        "opaqueColor": {
+                          "rgbColor": {
+                            "blue": 0.9372549,
+                            "green": 0.9372549,
+                            "red": 0.9372549
+                          }
+                        }
+                      }
+                    },
+                    "content": "\n"
+                  },
+                  "endIndex": 6,
+                  "startIndex": 5
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {},
+                    "bullet": {
+                      "nestingLevel": 6,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": " ",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 7,
+                  "startIndex": 6
+                },
+                {
+                  "textRun": {
+                    "style": {
+                      "foregroundColor": {
+                        "opaqueColor": {
+                          "rgbColor": {
+                            "blue": 0.9372549,
+                            "green": 0.9372549,
+                            "red": 0.9372549
+                          }
+                        }
+                      }
+                    },
+                    "content": "\n"
+                  },
+                  "endIndex": 7,
+                  "startIndex": 6
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {},
+                    "bullet": {
+                      "nestingLevel": 7,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": " ",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 8,
+                  "startIndex": 7
+                },
+                {
+                  "textRun": {
+                    "style": {
+                      "foregroundColor": {
+                        "opaqueColor": {
+                          "rgbColor": {
+                            "blue": 0.9372549,
+                            "green": 0.9372549,
+                            "red": 0.9372549
+                          }
+                        }
+                      }
+                    },
+                    "content": "\n"
+                  },
+                  "endIndex": 8,
+                  "startIndex": 7
+                },
+                {
+                  "paragraphMarker": {
+                    "style": {},
+                    "bullet": {
+                      "nestingLevel": 8,
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": " ",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 9,
+                  "startIndex": 8
+                },
+                {
+                  "textRun": {
+                    "style": {
+                      "foregroundColor": {
+                        "opaqueColor": {
+                          "rgbColor": {
+                            "blue": 0.9372549,
+                            "green": 0.9372549,
+                            "red": 0.9372549
+                          }
+                        }
+                      }
+                    },
+                    "content": "\n"
+                  },
+                  "endIndex": 9,
+                  "startIndex": 8
+                }
+              ]
+            },
+            "shapeProperties": {
+              "shapeBackgroundFill": {
+                "propertyState": "INHERIT"
+              },
+              "outline": {
+                "propertyState": "INHERIT"
+              },
+              "shadow": {
+                "propertyState": "INHERIT"
+              }
+            },
+            "placeholder": {
+              "type": "TITLE",
+              "parentObjectId": "p1_i2"
+            }
+          },
+          "transform": {
+            "translateY": -0.075,
+            "scaleY": 0.2309,
+            "scaleX": 2.7432,
+            "unit": "EMU"
+          },
+          "objectId": "p5_i2",
+          "size": {
+            "width": {
+              "magnitude": 3000000,
+              "unit": "EMU"
+            },
+            "height": {
+              "magnitude": 3000000,
+              "unit": "EMU"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "layoutProperties": {
+        "masterObjectId": "simple-light",
+        "name": "CAPTION_ONLY",
+        "displayName": "Caption"
+      },
+      "pageType": "LAYOUT",
+      "objectId": "p6",
+      "pageProperties": {
+        "pageBackgroundFill": {
+          "propertyState": "INHERIT"
+        }
+      },
+      "pageElements": [
+        {
+          "shape": {
+            "shapeType": "TEXT_BOX",
+            "text": {
+              "lists": {
+                "bodyPlaceholderListEntity": {
+                  "nestingLevel": {
+                    "8": {
+                      "bulletStyle": {}
+                    },
+                    "6": {
+                      "bulletStyle": {}
+                    },
+                    "0": {
+                      "bulletStyle": {
+                        "fontSize": {
+                          "magnitude": 18,
+                          "unit": "PT"
+                        }
+                      }
+                    },
+                    "7": {
+                      "bulletStyle": {}
+                    },
+                    "1": {
+                      "bulletStyle": {
+                        "fontSize": {
+                          "magnitude": 18,
+                          "unit": "PT"
+                        }
+                      }
+                    },
+                    "2": {
+                      "bulletStyle": {
+                        "fontSize": {
+                          "magnitude": 18,
+                          "unit": "PT"
+                        }
+                      }
+                    },
+                    "4": {
+                      "bulletStyle": {}
+                    },
+                    "5": {
+                      "bulletStyle": {}
+                    },
+                    "3": {
+                      "bulletStyle": {}
+                    }
+                  },
+                  "listId": "bodyPlaceholderListEntity"
+                }
+              },
+              "textElements": [
+                {
+                  "paragraphMarker": {
+                    "style": {
+                      "spaceAbove": {
+                        "magnitude": 4,
+                        "unit": "PT"
+                      },
+                      "alignment": "CENTER"
+                    },
+                    "bullet": {
+                      "listId": "bodyPlaceholderListEntity",
+                      "glyph": " ",
+                      "bulletStyle": {}
+                    }
+                  },
+                  "endIndex": 1
+                },
+                {
+                  "textRun": {
+                    "style": {
+                      "fontSize": {
+                        "magnitude": 18,
+                        "unit": "PT"
+                      }
+                    },
+                    "content": "\n"
+                  },
+                  "endIndex": 1
+                }
+              ]
+            },
+            "shapeProperties": {
+              "shapeBackgroundFill": {
+                "propertyState": "INHERIT"
+              },
+              "outline": {
+                "propertyState": "INHERIT"
+              },
+              "shadow": {
+                "propertyState": "INHERIT"
+              }
+            },
+            "placeholder": {
+              "type": "BODY",
+              "parentObjectId": "p1_i3"
+            }
+          },
+          "transform": {
+            "translateX": 457200,
+            "scaleY": 0.1732,
+            "scaleX": 2.7432,
+            "translateY": 4634909.375,
+            "unit": "EMU"
+          },
+          "objectId": "p6_i4",
+          "size": {
+            "width": {
+              "magnitude": 3000000,
+              "unit": "EMU"
+            },
+            "height": {
+              "magnitude": 3000000,
+              "unit": "EMU"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "layoutProperties": {
+        "masterObjectId": "simple-light",
+        "name": "BLANK",
+        "displayName": "Blank"
+      },
+      "pageType": "LAYOUT",
+      "objectId": "p7",
+      "pageProperties": {
+        "pageBackgroundFill": {
+          "propertyState": "INHERIT"
+        }
+      }
+    }
+  ]
+}
