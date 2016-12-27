@@ -15,6 +15,7 @@
         "itemids",
         "locationid",
         "plot_title",
-        "plot_path"
+        "plot_path",
+        "plot_free_y"
     ]
 }

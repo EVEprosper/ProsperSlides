@@ -5,6 +5,7 @@ plot.typeids = c({itemids})
 plot.locationid = {locationid}
 plot.title = {plot_title}
 plot.path = {plot_path}
+plot.free_y = {plot_free_y}
 
 date.min <- Sys.Date() - plot.range
 plot.typeids.str <- paste(plot.typeids, collapse=',')
@@ -104,7 +105,11 @@ plot <- ggplot(
         color=variable)
 )
 plot <- plot + geom_line()
-plot <- plot + facet_wrap(~typeName, scales='free_y')
+if(plot.free_y){
+    plot <- plot + facet_wrap(~typeName, scales='free_y')
+}else{
+    plot <- plot + facet_wrap(~typeName)
+}
 plot <- plot + theme_dark()
 plot <- plot + labs(
     title=plot.title,
@@ -122,19 +127,19 @@ if(do_lines){
 if(price.min_scale > 1e9){
     plot <- plot + scale_y_continuous(
         limit=c(price.min_scale, NA),
-        labels=function(x)sprintf('%.2fB', x/1e9),
+        labels=function(x)sprintf('%.0fB', x/1e9),
         position='right'
     )
 }else if(price.min_scale > 1e6){
     plot <- plot + scale_y_continuous(
         limit=c(price.min_scale, NA),
-        labels=function(x)sprintf('%.2fM', x/1e6),
+        labels=function(x)sprintf('%.0fM', x/1e6),
         position='right'
     )
 }else if(price.min_scale > 1e3){
     plot <- plot + scale_y_continuous(
         limit=c(price.min_scale, NA),
-        labels=function(x)sprintf('%.2fK', x/1e3),
+        labels=function(x)sprintf('%.0fK', x/1e3),
         position='right'
     )
 }else{
