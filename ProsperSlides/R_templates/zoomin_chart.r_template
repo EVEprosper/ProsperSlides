@@ -22,11 +22,11 @@ if(nrow(event)==0){do_lines <- FALSE}
 
 ## Get Data ##
 ec.query <- paste0(
-    'SELECT price_date AS `date`, price_time AS `hour`, locationid, ',
+    'SELECT price_date AS `date`, price_time AS `hour`, locationid, typeid, ',
     'SUM(IF(buy_sell=1, price_best,0)) AS `SellOrder`, ',
     'SUM(IF(buy_sell=1, order_volume,0)) AS `SellVolume`, ',
     'SUM(IF(buy_sell=0, price_best,0)) AS `BuyOrder`, ',
-    'SUM(IF(buy_sell=0, order_volume,0)) AS `BuyVolume`, typeid ',
+    'SUM(IF(buy_sell=0, order_volume,0)) AS `BuyVolume`',
     'FROM snapshot_evecentral ',
     'WHERE typeid=', plot.typeid, ' ',
     'AND price_date > \'', date.min, '\' ',
@@ -155,6 +155,10 @@ if(price.max_scale > 1e9){
         labels=function(x)sprintf('%.2fK', x/1e3),
         position='right'
     )
+}else{
+    plot.price <- plot.price + scale_y_continuous(
+        position='right'
+    )
 }
 plot.price <- plot.price + theme_dark()
 plot.price <- plot.price + scale_color_manual(
@@ -202,6 +206,10 @@ if(volume.max_scale > 1e9){
         labels=function(x)sprintf('%.2fK', x/1e3),
         position='right'
     )
+}else{
+    plot.volume <- plot.price + scale_y_continuous(
+        position='right'
+    )
 }
 plot.volume <- plot.volume + theme_dark()
 plot.volume <- plot.volume + scale_color_manual(
@@ -216,9 +224,9 @@ plot.combined <- plot_grid(
     align='v'
 )
 
-filename <- paste0(plot.path, '/', plot.title, '.png')
+## Print Plot To File ##
 png(
-    filename,
+    plot.path,
     width=plot.width,
     height=plot.height
 )
