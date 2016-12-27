@@ -91,6 +91,7 @@ setup(
         'ProsperSlides':[
             'R_templates/*',
             'slide_templates/*',
+            'static_images/*'
             'ProsperSlides.cfg'
         ]
     },
@@ -99,7 +100,8 @@ setup(
         'google-api-python-client==1.5.5',
         'plumbum==1.6.2',
         'requests==2.11.1',
-        'rpy2==2.7.8'
+        'rpy2==2.7.8',
+        'keyring=10.1'
     ],
     tests_require=[
         'pytest==3.0.3'
