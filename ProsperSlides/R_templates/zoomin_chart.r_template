@@ -1,0 +1,71 @@
+plot.width = {img_width}
+plot.height = {img_height}
+plot.range = {date_range}
+plot.typeid = {itemid}
+plot.locationid = {locationid}
+
+date.min <- Sys.Date() - date_range
+
+## Event List ##
+event.query <- paste0(
+    'SELECT datetime, eventName ',
+    'FROM event_list ',
+    'WHERE eventGroup in (\'patch\') ',
+    'AND datetime > \'', date.min, '\' '
+)
+event <- sqlQuery(emd, event.query)
+event$datetime <- as.POSIXlt(event$datetime, tz='GMT')
+
+## Get Data ##
+ec.query <- paste0(
+    'SELECT price_date AS `date`, price_time AS `hour`, locationid, ',
+    'SUM(IF(buy_sell=1, price_best,0)) AS `SellOrder`, ',
+    'SUM(IF(buy_sell=1, order_volume,0)) AS `SellVolume`, ',
+    'SUM(IF(buy_sell=0, price_best,0)) AS `BuyOrder`, ',
+    'SUM(IF(buy_sell=0, order_volume,0)) AS `BuyVolume`, typeid ',
+    'FROM snapshot_evecentral ',
+    'WHERE typeid=', plot.typeid, ' ',
+    'AND price_date > \'', date.min, '\' ',
+    'AND locationid=', plot.locationid, ' ',
+    'GROUP BY price_date, price_time, typeid, locationid'
+)
+ec <- sqlQuery(emd, ec.query)
+ec$date <- as.Date(ec$date)
+ec$typeid <- asfactor(ec$typeid)
+ec <- subset(ec, SellOrder > 0)
+ec$datetime <- paste(ec$date, ec$hour, sep=' ')
+ec$datetime <- as.POSIXlt(ec$datetime, tz='GMT')
+
+## CREST lookups ##
+CREST_BASE = 'https://crest-tq.eveonline.com/'
+solarsystem.addr <- paste0(CREST_BASE, 'solarsystems/', plot.locationid, '/')
+solarsystem.json <- fromJSON(readLines(solarsystem.addr))
+solarsystem.name <- solarsystem.json$name
+
+type.addr <- paste0(CREST_BASE, 'inventory/types/', plot.typeid, '/')
+type.json <- fromJSON(readLines(type.addr))
+type.name <- type.json$name
+
+ec$locationName <- solarsystem.name
+ec$typeName <- type.name
+
+## Build Plot ##
+plot.data <- subset(ec, typeid==plot.typeid, & locationid==plot.locationid) #FIXME: extra?
+plot.data$SellOrder[plot.data$SellOrder <= 0] <- NA
+plot.data <- melt.data.frame(
+    plot.data,
+    id.vars=c(
+        'datetime',
+        'typeName',
+        'typeid'),
+    measure.vars=c(
+        'SellOrder',
+        'BuyOrder',
+        'BuyVolume',
+        'SellVolume')
+)
+plot.data$facet[plot.data$variable %in% c('SellOrder', 'BuyOrder')] <- 'price'
+plot.data$facet[plot.data$variable %in% c('BuyVolume', 'SellVolume')] <- 'volume'
+plot.data.price <- subset(plot.data, facet=='price')
+plot.data.volume <- subset(plot.data, facet=='volume')
+
