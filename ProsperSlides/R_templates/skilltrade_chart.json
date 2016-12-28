@@ -1,0 +1,22 @@
+{
+    "package_requires":[
+        "RODBC",
+        "ggplot2",
+        "grid",
+        "reshape",
+        "scales",
+        "data.table",
+        "jsonlite"
+    ],
+    "robjects":[
+        "emd <- odbcConnect('randomboy_new')"
+    ],
+    "required_args":[
+        "img_width",
+        "img_height",
+        "date_range",
+        "locationid",
+        "plot_title",
+        "plot_path"
+    ]
+}
