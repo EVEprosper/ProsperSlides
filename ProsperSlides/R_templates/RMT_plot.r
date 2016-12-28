@@ -116,6 +116,18 @@ if(do_lines){
         linetype=2,
         color='white'
     )
+    plot <- plot + geom_text(
+        aes(
+            x=datetime,
+            y=Inf,
+            label=eventName),
+        color='white',
+        angle=-90,
+        vjust=1.2,
+        hjust=0,
+        data=event,
+        inherit.aes=FALSE
+    )
 }
 plot <- plot + labs(
     title=plot.title,
