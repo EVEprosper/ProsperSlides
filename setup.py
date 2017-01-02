@@ -96,7 +96,7 @@ setup(
         ]
     },
     install_requires=[
-        'ProsperCommon==0.3.4',
+        'ProsperCommon==0.3.5a1',
         'google-api-python-client==1.5.5',
         'plumbum==1.6.2',
         'requests==2.11.1',

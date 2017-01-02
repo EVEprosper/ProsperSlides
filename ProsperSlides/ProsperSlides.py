@@ -7,10 +7,10 @@ Using: https://developers.google.com/slides API
 """
 
 from datetime import datetime
-from os import path
+from os import path, makedirs, access, W_OK#, R_OK
 
 import requests
-from plumbum import cli
+from plumbum import cli, local
 
 import prosper.common.prosper_logging as p_logging
 import prosper.common.prosper_config as p_config
@@ -20,6 +20,9 @@ ME = __file__.replace('.py', '')
 CONFIG_ABSPATH = path.join(HERE, 'ProsperSlides.cfg')
 config = p_config.ProsperConfig(CONFIG_ABSPATH)
 logger = p_logging.DEFAULT_LOGGER
+
+DROPBOX = False
+GDRIVE = False
 
 def build_logger(
         log_name=ME,
@@ -64,6 +67,46 @@ class ProsperSlides(cli.Application):
         global logger
         self._log_builder.configure_debug_logger()
         logger = self._log_builder.logger
+
+    outfile = path.join(local.env.home, 'Dropbox', 'ProsperPlots')
+    @cli.switch(
+        ['-o', '--output'],
+        str,
+        help='base path to write plots to',
+        default=outfile
+    )
+    def set_output_file(self, filepath):
+        """test to make sure path is ok"""
+        if not path.exists(filepath):
+            try:
+                makedirs(filepath, exist_ok=True)
+            except Exception as err_msg:
+                logger.error(
+                    'Unable to create path for outfile' +
+                    '\n\tpath=' + filepath +
+                    '\n\texception=' + repr(err_msg)
+                )
+                raise err_msg
+
+        if not access(filepath, W_OK):
+            logger.error(
+                'Lacking proper permissions in path' +
+                '\n\tpath=' + filepath
+            )
+            raise PermissionError
+
+        if 'dropbox' in str(filepath).lower():
+            global DROPBOX
+            DROPBOX = True
+
+        if 'google' in str(filepath).lower():
+            global GDRIVE
+            GDRIVE = True
+
+        if DROPBOX and GDRIVE:
+            riase Exception('path cannot both be gdrive & dropbox')
+
+        self.outfile = filepath
 
     def main(self):
         logger.debug('hello world')
