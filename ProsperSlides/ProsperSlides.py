@@ -51,6 +51,47 @@ def build_logger(
     logger = log_builder.logger
     return log_builder
 
+def test_filepath(filepath):
+    """test filepath, make sure it exists and has proper permissions
+
+    Args:
+        filepath (str): filepath abspath > relpath
+
+    Returns:
+        (str): filepath (or exception)
+
+    """
+    if not path.exists(filepath):
+        try:
+            makedirs(filepath, exist_ok=True)
+        except Exception as err_msg:
+            logger.error(
+                'Unable to create path for outfile' +
+                '\n\tpath=' + filepath +
+                '\n\texception=' + repr(err_msg)
+            )
+            raise err_msg
+
+    if not access(filepath, W_OK):
+        logger.error(
+            'Lacking proper permissions in path' +
+            '\n\tpath=' + filepath
+        )
+        raise PermissionError
+
+    if 'dropbox' in str(filepath).lower():
+        global DROPBOX
+        DROPBOX = True
+
+    if 'google' in str(filepath).lower():
+        global GDRIVE
+        GDRIVE = True
+
+    if DROPBOX and GDRIVE:
+        raise Exception('path cannot both be gdrive & dropbox')
+
+    return filepath
+
 class ProsperSlides(cli.Application):
     """Plumbum CLI application to build EVE Prosper Market Show slidedeck"""
     _log_builder = build_logger()
@@ -68,42 +109,17 @@ class ProsperSlides(cli.Application):
         self._log_builder.configure_debug_logger()
         logger = self._log_builder.logger
 
-    outfile = path.join(local.env.home, 'Google Drive', 'Prosper Shownotes', 'Plots')
+    outfile = test_filepath(
+        path.join(local.env.home, 'Google Drive', 'Prosper Shownotes', 'Plots')
+    )
     @cli.switch(
         ['-o', '--output'],
         str,
         help='base path to write plots to'
     )
-    def set_output_file(self, filepath):
+    def set_output_file(self, filepath=outfile):
         """test to make sure path is ok"""
-        if not path.exists(filepath):
-            try:
-                makedirs(filepath, exist_ok=True)
-            except Exception as err_msg:
-                logger.error(
-                    'Unable to create path for outfile' +
-                    '\n\tpath=' + filepath +
-                    '\n\texception=' + repr(err_msg)
-                )
-                raise err_msg
-
-        if not access(filepath, W_OK):
-            logger.error(
-                'Lacking proper permissions in path' +
-                '\n\tpath=' + filepath
-            )
-            raise PermissionError
-
-        if 'dropbox' in str(filepath).lower():
-            global DROPBOX
-            DROPBOX = True
-
-        if 'google' in str(filepath).lower():
-            global GDRIVE
-            GDRIVE = True
-
-        if DROPBOX and GDRIVE:
-            raise Exception('path cannot both be gdrive & dropbox')
+        filepath = test_filepath(filepath)
 
         self.outfile = filepath
 
