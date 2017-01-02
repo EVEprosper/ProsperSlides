@@ -68,12 +68,11 @@ class ProsperSlides(cli.Application):
         self._log_builder.configure_debug_logger()
         logger = self._log_builder.logger
 
-    outfile = path.join(local.env.home, 'Dropbox', 'ProsperPlots')
+    outfile = path.join(local.env.home, 'Google Drive', 'Prosper Shownotes', 'Plots')
     @cli.switch(
         ['-o', '--output'],
         str,
-        help='base path to write plots to',
-        default=outfile
+        help='base path to write plots to'
     )
     def set_output_file(self, filepath):
         """test to make sure path is ok"""
@@ -104,12 +103,13 @@ class ProsperSlides(cli.Application):
             GDRIVE = True
 
         if DROPBOX and GDRIVE:
-            riase Exception('path cannot both be gdrive & dropbox')
+            raise Exception('path cannot both be gdrive & dropbox')
 
         self.outfile = filepath
 
     def main(self):
         logger.debug('hello world')
+        logger.debug(self.outfile)
 
 if __name__ == '__main__':
     ProsperSlides.run()
