@@ -9,6 +9,7 @@ Using: https://developers.google.com/slides API
 from datetime import datetime
 from os import path, makedirs, access, W_OK#, R_OK
 
+import ujson as json
 import requests
 from plumbum import cli, local
 
@@ -92,6 +93,21 @@ def test_filepath(filepath):
 
     return filepath
 
+def load_graph_profile(profile_filepath):
+    """load profile for making graphs"""
+    try:
+        with open(profile_filepath, 'r') as filehandle:
+            graph_profile_obj = json.load(filehandle)
+    except Exception as err_msg:
+        logger.error(
+            'Unable to load graph profile from file:' +
+            '\n\tfilepath=' + profile_filepath,
+            exc_info=True
+        )
+        raise err_msg
+
+    return graph_profile_obj
+
 class ProsperSlides(cli.Application):
     """Plumbum CLI application to build EVE Prosper Market Show slidedeck"""
     _log_builder = build_logger()
@@ -122,6 +138,16 @@ class ProsperSlides(cli.Application):
         filepath = test_filepath(filepath)
 
         self.outfile = filepath
+
+    graph_profile = load_graph_profile(path.join(HERE, 'default_graphlist.json'))
+    @cli.switch(
+        ['-p', '--profile'],
+        str,
+        help='Profile to build plots from (.json)'
+    )
+    def load_profile(self, profile_filepath):
+        """load profile for making graphs"""
+        self.graph_profile = load_graph_profile(profile_filepath)
 
     def main(self):
         logger.debug('hello world')

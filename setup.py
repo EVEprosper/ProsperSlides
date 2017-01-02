@@ -101,7 +101,8 @@ setup(
         'plumbum==1.6.2',
         'requests==2.11.1',
         'rpy2==2.7.8',
-        'keyring=10.1'
+        'keyring=10.1',
+        'ujson==1.35'
     ],
     tests_require=[
         'pytest==3.0.3'
