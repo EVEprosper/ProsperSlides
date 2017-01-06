@@ -93,6 +93,7 @@ setup(
             'slide_templates/*',
             'static_images/*'
             'ProsperSlides.cfg'
+            'default_graphlist.json'
         ]
     },
     install_requires=[
