@@ -21,7 +21,6 @@
         "img_width",
         "img_height",
         "plot_title",
-        "default_TA",
         "TA_args",
         "default_subset"
     ]

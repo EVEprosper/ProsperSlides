@@ -102,6 +102,7 @@ setup(
         'requests==2.11.1',
         'rpy2==2.7.8',
         'keyring=10.1',
+        'dropbox==7.1.1',
         'ujson==1.35'
     ],
     tests_require=[

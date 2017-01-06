@@ -9,9 +9,8 @@
             "img_width": 1600,
             "img_height": 900,
             "plot_title": "PLEX",
-            "default_TA": "addBBands(15,2);addVo();addMACD(5,15,5);addRSI();addLines(h=30, on=4);addLines(h=70, on=4)",
-            "TA_args": "",
-            "default_subset": "last 180 days"
+            "TA_args": "addBBands(15,2);addVo();addMACD(5,15,5);addRSI();addLines(h=30, on=4);addLines(h=70, on=4)",
+            "default_subset": "last 60 days"
         }
     }]
 }

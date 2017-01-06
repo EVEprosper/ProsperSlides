@@ -28,7 +28,7 @@ market.data.ts <- xts(
 chartSeries(
     market.data.ts,
     name='{plot_title}',
-    TA='{default_TA}{TA_args}',
+    TA='{TA_args}',
     subset='{default_subset}'
 )
 dev.off()
