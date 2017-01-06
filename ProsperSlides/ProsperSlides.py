@@ -13,85 +13,43 @@ import ujson as json
 import requests
 from plumbum import cli, local
 
-import prosper.common.prosper_logging as p_logging
-import prosper.common.prosper_config as p_config
+import Helpers as ps_helper
+#import prosper.common.prosper_logging as p_logging
+#import prosper.common.prosper_config as p_config
 
 HERE = path.abspath(path.dirname(__file__))
 ME = __file__.replace('.py', '')
 CONFIG_ABSPATH = path.join(HERE, 'ProsperSlides.cfg')
-config = p_config.ProsperConfig(CONFIG_ABSPATH)
-logger = p_logging.DEFAULT_LOGGER
+config = ps_helper.CONFIG
+logger = ps_helper.DEFAULT_LOGGER
 
-DROPBOX = False
-GDRIVE = False
 
-def build_logger(
-        log_name=ME,
-        config=config
-):
-    """build a logger for the script to use.
-    --avoids issue of library/app fighting loggers
+def path_platform(filepath):
+    """figure out which imagehost/sharing platform is being used
 
     Args:
-        log_name (str, optional): name for logfile, default scriptname
-        config (:obj:`configparser.ConfigParser`, optional): [Logging] option overrides
-
-    Returs:
-        (:obj:`prosper.common.ProsperLogger`): log builder for appending options onto
-
-    Note:
-        Pushes logger onto gloabl
-
-    """
-    global logger
-    log_builder = p_logging.ProsperLogger(
-        log_name,
-        'logs',
-        config_obj=config
-    )
-    logger = log_builder.logger
-    return log_builder
-
-def test_filepath(filepath):
-    """test filepath, make sure it exists and has proper permissions
-
-    Args:
-        filepath (str): filepath abspath > relpath
+        filepath (str): path to dump directory
 
     Returns:
-        (str): filepath (or exception)
+        (:obj:`Helpers.HostPlatform`): Enum of which platform is being used
 
     """
-    if not path.exists(filepath):
-        try:
-            makedirs(filepath, exist_ok=True)
-        except Exception as err_msg:
-            logger.error(
-                'Unable to create path for outfile' +
-                '\n\tpath=' + filepath +
-                '\n\texception=' + repr(err_msg)
-            )
-            raise err_msg
-
-    if not access(filepath, W_OK):
-        logger.error(
-            'Lacking proper permissions in path' +
-            '\n\tpath=' + filepath
-        )
-        raise PermissionError
+    host = ps_helper.HostPlatform.ERROR
+    types_found = 0
 
     if 'dropbox' in str(filepath).lower():
-        global DROPBOX
-        DROPBOX = True
+        host = ps_helper.HostPlatform.DROPBOX
+        types_found += 1
+    elif 'google' in str(filepath).lower():
+        host = ps_helper.HostPlatform.DROPBOX
+        types_found += 1
+    else:
+        raise ps_helper.UnsupportedHost('Unable to resolve host in=' + str(filepath))
 
-    if 'google' in str(filepath).lower():
-        global GDRIVE
-        GDRIVE = True
+    if types_found != 1:
+        raise ps_helper.ConfusingHosts('Multiple possible hosts identified in=' + str(filepath))
 
-    if DROPBOX and GDRIVE:
-        raise Exception('path cannot both be gdrive & dropbox')
-
-    return filepath
+    return host
 
 def load_graph_profile(profile_filepath):
     """load profile for making graphs"""
@@ -110,7 +68,7 @@ def load_graph_profile(profile_filepath):
 
 class ProsperSlides(cli.Application):
     """Plumbum CLI application to build EVE Prosper Market Show slidedeck"""
-    _log_builder = build_logger()
+    _log_builder = ps_helper.build_logger('ProsperSlides')  #TODO: fix ME?
     debug = cli.Flag(
         ['d', '--debug'],
         help='Debug mode, send data to local files'
@@ -121,13 +79,14 @@ class ProsperSlides(cli.Application):
         help='enable verbose logging')
     def enable_verbose(self):
         """toggle verbose output"""
-        global logger
-        self._log_builder.configure_debug_logger()
-        logger = self._log_builder.logger
 
-    outfile = test_filepath(
-        path.join(local.env.home, 'Google Drive', 'Prosper Shownotes', 'Plots')
+        self._log_builder.configure_debug_logger()
+        ps_helper.LOGGER = self._log_builder.logger
+
+    outfile = ps_helper.test_filepath(
+        path.join(local.env.home, 'Dropbox', 'Prosper Shownotes', 'Plots')
     )
+    platform = ps_helper.HostPlatform.ERROR
     @cli.switch(
         ['-o', '--output'],
         str,
@@ -135,9 +94,8 @@ class ProsperSlides(cli.Application):
     )
     def set_output_file(self, filepath=outfile):
         """test to make sure path is ok"""
-        filepath = test_filepath(filepath)
-
-        self.outfile = filepath
+        self.outfile = ps_helper.test_filepath(filepath)
+        self.platform = path_platform(filepath)
 
     graph_profile = load_graph_profile(path.join(HERE, 'default_graphlist.json'))
     @cli.switch(
@@ -150,6 +108,9 @@ class ProsperSlides(cli.Application):
         self.graph_profile = load_graph_profile(profile_filepath)
 
     def main(self):
+        global logger
+        logger = self._log_builder.logger
+        ps_helper.LOGGER = logger #TODO: this seems sloppy?
         logger.debug('hello world')
         logger.debug(self.outfile)
 
