@@ -91,4 +91,4 @@ venv*/
 
 # Client secret files
 *_local.cfg
-client_secret_*.json
+client_secret*.json
