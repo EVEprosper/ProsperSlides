@@ -79,6 +79,7 @@ def test_filepath(filepath):
         raise PermissionError
 
     return filepath
+
 class ProsperSlidesException(Exception):
     """project-level Exception class for custom exceptions"""
     pass
