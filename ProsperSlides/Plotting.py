@@ -76,12 +76,14 @@ def plot(
             '\n\tplot_filename={0}'.format(plot_filename),
             exc_info=True
         )
-    ## clean up before exiting ##
-    logger.debug('-- Cleaning up environment')
-    for package in metadata['package_requires']:
-        robjects.r(
-            'detach("package:{0}", unload=TRUE)'.format(package)
-        )
+
+    #TODO: detach crashes python
+    ### clean up before exiting ##
+    #logger.debug('-- Cleaning up environment')
+    #for package in metadata['package_requires']:
+    #    robjects.r(
+    #        'detach("package:{0}", unload=TRUE)'.format(package)
+    #    )
 
     return plot_args['img_path']
 
