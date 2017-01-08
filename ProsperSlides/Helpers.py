@@ -6,7 +6,7 @@
 from os import path, makedirs, access, W_OK
 from enum import Enum
 
-import ujson as jsonschema
+import ujson as json
 import jsonschema
 
 import prosper.common.prosper_logging as p_logging
@@ -83,24 +83,25 @@ def test_filepath(filepath):
 
     return filepath
 
+DEFAULT_SCHEMA_PATH = path.join(HERE, CONFIG.get('PATHS', 'json_templates'))
 def validate_json(
         test_obj,
-        json_schema_path
+        json_schema_name,
+        schema_path=DEFAULT_SCHEMA_PATH
 ):
     """use jsonschema to validate object
 
     Args:
         test_obj (:obj:`dict`): JSON serialized dictionary
-        json_schema (str): name of jsonschema file
+        json_schema_name (str): name of jsonschema file
 
     Returns:
         (bool): passed/failed validation
 
     """
     schema_fullpath = path.join(
-        HERE,
-        CONFIG.get('PATHS', 'json_templates'),
-        json_schema_path
+        schema_path,
+        json_schema_name
     )
     if not path.isfile(schema_fullpath):
         raise FileNotFoundError(

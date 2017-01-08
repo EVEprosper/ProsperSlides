@@ -14,6 +14,7 @@ import requests
 from plumbum import cli, local
 
 import Helpers as ps_helper
+import Plotting as ps_plotting
 #import prosper.common.prosper_logging as p_logging
 #import prosper.common.prosper_config as p_config
 
@@ -78,17 +79,30 @@ def load_graph_profile(profile_filepath):
 
     return graph_profile_obj
 
-def generate_plots(plot_profile):
+def generate_plots(
+        plot_profile,
+        debug_output=False
+    ):
     """using the plot profile, walk through and generate plots
 
     Args:
         plot_profile (:obj:`dict`): JSON serialized collection of plot profiles
-
+        debug_output (bool): flag for progress bar vs log-to-screen
     Returns:
         (:obj:`list` str): collection of filepaths where plots should be (in order)
 
     """
-    pass
+    progress_bar = cli.progress.ProgressBase(
+        length=len(plot_profile['plots']),
+        has_output=debug_output
+    )
+    for index, plot_profile in enumerate(plot_profile['plots']):
+        progress_bar.display()
+        logger.info('--plotting: ' + plot_profile['filename'])
+
+
+        progress_bar.increment()
+    progress_bar.done()
 
 class ProsperSlides(cli.Application):
     """Plumbum CLI application to build EVE Prosper Market Show slidedeck"""
