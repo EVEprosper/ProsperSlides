@@ -91,12 +91,21 @@ def validate_json(
 
     Args:
         test_obj (:obj:`dict`): JSON serialized dictionary
-        json_schema (str): path to jsonschema file (abspath > relpath)
+        json_schema (str): name of jsonschema file
 
     Returns:
         (bool): passed/failed validation
 
     """
+    schema_fullpath = path.join(
+        HERE,
+        CONFIG.get('PATHS', 'json_templates'),
+        json_schema_path
+    )
+    if not path.isfile(schema_fullpath):
+        raise FileNotFoundError(
+            'Unable to find schema in path: ' + str(schema_fullpath)
+        )
     return True
 
 class ProsperSlidesException(Exception):

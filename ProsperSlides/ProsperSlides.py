@@ -59,7 +59,20 @@ def load_graph_profile(profile_filepath):
     except Exception as err_msg:
         logger.error(
             'Unable to load graph profile from file:' +
-            '\n\tfilepath=' + profile_filepath,
+            '\n\profile_filepath{0}'.format(profile_filepath),
+            exc_info=True
+        )
+        raise err_msg
+    try:
+        ps_helper.validate_json(
+            graph_profile_obj,
+            'graphlist_schema'
+        )
+    except Exception as err_msg:
+        logger.error(
+            'EXCEPTION: json file not validated' +
+            '\n\tproject_filepath={0}'.format(profile_filepath) +
+            '\n\tjson_schemafile={0}'.format('graphlist_schema'),
             exc_info=True
         )
         raise err_msg
