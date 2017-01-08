@@ -12,6 +12,6 @@
             "TA_args": "addBBands(15,2);addVo();addMACD(5,15,5);addRSI();addLines(h=30, on=4);addLines(h=70, on=4)",
             "default_subset": "last 60 days"
         },
-        "filename": "plex_60d_plot.png"
+        "filename": "plex-60d-plot"
     }]
 }

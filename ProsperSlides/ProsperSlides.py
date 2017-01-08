@@ -80,7 +80,7 @@ def load_graph_profile(profile_filepath):
     return graph_profile_obj
 
 def generate_plots(
-        plot_profile,
+        plot_profiles,
         debug_output=False
     ):
     """using the plot profile, walk through and generate plots
@@ -93,14 +93,38 @@ def generate_plots(
 
     """
     progress_bar = cli.progress.ProgressBase(
-        length=len(plot_profile['plots']),
+        length=len(plot_profiles['plots']),
         has_output=debug_output
     )
-    for index, plot_profile in enumerate(plot_profile['plots']):
+    plot_list = []
+    for index, plot_profile in enumerate(plot_profiles['plots']):
         progress_bar.display()
         logger.info('--plotting: ' + plot_profile['filename'])
 
+        index_str = '%03d' % index
+        plot_filename = '{index}_{filename}_{template}.png'.format(
+            index=index_str,
+            filename=plot_profile['filename'],
+            profile=plot_profile['template']
+        )
+        try:
+            plot_path = ps_plotting.plot(
+                plot_profile['template'],
+                plot_filename,
+                plot_profile['required_args'],
+                logger=logger
+            )
+        except Exception as err_msg:
+            logger.warning(
+                'EXCEPTION: building plot failed' +
+                '\n\tplot_filename={0}'.format(plot_filename) +
+                '\n\tplot_profile={0}'.format(plot_profile['template']) +
+                '\n\texception={0}'.format(repr(err_msg))
+            )
+            progress_bar.increment()
+            continue    #continue building plots
 
+        plot_list.append(plot_path)
         progress_bar.increment()
     progress_bar.done()
 

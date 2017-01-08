@@ -12,7 +12,7 @@ import ujson as json
 import ProsperSlides.Helpers as ps_helper
 
 def plot(
-        plot_profile,
+        plot_template,
         plot_filename,
         plot_args,
         logger=ps_helper.DEFAULT_LOGGER
@@ -20,7 +20,7 @@ def plot(
     """plot magic
 
     Args:
-        plot_profile (:obj:`dict`): special info for filling out template
+        plot_template (str): special info for filling out template
         plot_filename (str): filename to print to
         plot_args (:obj:`dict`): specific template data
         logger (:obj:`logging.logger`, optional): logging handle for logs
@@ -30,9 +30,52 @@ def plot(
 
     """
     r_template, metadata = get_template(
-        plot_profile,
+        plot_template,
         logger=logger
     )
+
+    plot_args['img_path'] = plot_filename
+    if not plot_args.keys() == metadata['required_args'].keys():
+        raise KeyError('Plot profile and metadata do not match')
+
+    r_template = r_template.format(plot_args)   #apply required_args
+
+    ## import libaries for R ##
+    logger.debug('-- Building up environment')
+    for package in metadata['package_requires']:
+        if package in metadata['package_overrides']:
+            #quantmod is weird
+            util = rpy2.ropjects.packages.importr(
+                package,
+                robject_translations=metadata['package_overrides'][package]['robject_translations']
+            )
+        else:
+            util = rpy2.ropjects.packages.importr(package)
+        util.chooseCRANmirror(ind=1)    #install package: https://rpy2.readthedocs.io/en/version_2.8.x/robjects_rpackages.html#installing-removing-r-packages
+
+    if 'robjects' in metadata:
+        for robject in metadata['robjects']:
+            rpy2.robjects.r(robject)
+
+    ## Execute R script
+    logger.debug('-- Executing R')
+    try:
+        rpy2.robject.r(r_template)
+    except Exception as err_msg:
+        logger.error(
+            'EXCEPTION: rpy/plot failed' +
+            '\n\tplot_template={0}'.format(plot_template) +
+            '\n\tplot_filename={0}'.format(plot_filename),
+            exc_info=True
+        )
+    ## clean up before exiting ##
+    logger.debug('-- Cleaning up environment')
+    for package in metadata['package_required']:
+        rpy2.robjects.r(
+            'detatch("package:{0}", unload=TRUE)'.format(package)
+        )
+
+
 
 GRAPH_TEMPLATE_PATH = ps_helper.CONFIG.get('PATHS', 'r_templates')
 def get_template(
