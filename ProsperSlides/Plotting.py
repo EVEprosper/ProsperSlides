@@ -47,7 +47,7 @@ def plot(
         raise KeyError('Plot profile and metadata do not match')
 
     r_template = r_template.format_map(plot_args)   #apply required_args
-    logger.debug(r_template)
+
     ## import libaries for R ##
     logger.debug('-- Building up environment')
     for package in metadata['package_requires']:
@@ -59,7 +59,7 @@ def plot(
             )
         else:
             util = importr(package)
-        util.chooseCRANmirror(ind=1)    #install package: https://rpy2.readthedocs.io/en/version_2.8.x/robjects_rpackages.html#installing-removing-r-packages
+        #util.chooseCRANmirror(ind=1)    #install package: https://rpy2.readthedocs.io/en/version_2.8.x/robjects_rpackages.html#installing-removing-r-packages
 
     if 'robjects' in metadata:
         for robject in metadata['robjects']:
@@ -68,7 +68,7 @@ def plot(
     ## Execute R script
     logger.debug('-- Executing R')
     try:
-        rpy2.robject.r(r_template)
+        robjects.r(r_template)
     except Exception as err_msg:
         logger.error(
             'EXCEPTION: rpy/plot failed' +
@@ -78,9 +78,9 @@ def plot(
         )
     ## clean up before exiting ##
     logger.debug('-- Cleaning up environment')
-    for package in metadata['package_required']:
+    for package in metadata['package_requires']:
         robjects.r(
-            'detatch("package:{0}", unload=TRUE)'.format(package)
+            'detach("package:{0}", unload=TRUE)'.format(package)
         )
 
     return plot_args['img_path']
