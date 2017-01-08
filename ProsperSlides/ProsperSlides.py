@@ -23,7 +23,6 @@ CONFIG_ABSPATH = path.join(HERE, 'ProsperSlides.cfg')
 config = ps_helper.CONFIG
 logger = ps_helper.DEFAULT_LOGGER
 
-
 def path_platform(filepath):
     """figure out which imagehost/sharing platform is being used
 
@@ -41,7 +40,7 @@ def path_platform(filepath):
         host = ps_helper.HostPlatform.DROPBOX
         types_found += 1
     elif 'google' in str(filepath).lower():
-        host = ps_helper.HostPlatform.DROPBOX
+        host = ps_helper.HostPlatform.GOOGLE
         types_found += 1
     else:
         raise ps_helper.UnsupportedHost('Unable to resolve host in=' + str(filepath))
@@ -58,7 +57,7 @@ def load_graph_profile(profile_filepath):
             graph_profile_obj = json.load(filehandle)
     except Exception as err_msg:
         logger.error(
-            'Unable to load graph profile from file:' +
+            'EXCEPTION: Unable to load graph profile from file:' +
             '\n\profile_filepath{0}'.format(profile_filepath),
             exc_info=True
         )
@@ -66,13 +65,13 @@ def load_graph_profile(profile_filepath):
     try:
         ps_helper.validate_json(
             graph_profile_obj,
-            'graphlist_schema'
+            'graphlist_schema.json'
         )
     except Exception as err_msg:
         logger.error(
             'EXCEPTION: json file not validated' +
             '\n\tproject_filepath={0}'.format(profile_filepath) +
-            '\n\tjson_schemafile={0}'.format('graphlist_schema'),
+            '\n\tjson_schemafile={0}'.format('graphlist_schema.json'),
             exc_info=True
         )
         raise err_msg
