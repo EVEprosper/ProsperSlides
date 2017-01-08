@@ -6,6 +6,9 @@
 from os import path, makedirs, access, W_OK
 from enum import Enum
 
+import ujson as jsonschema
+import jsonschema
+
 import prosper.common.prosper_logging as p_logging
 import prosper.common.prosper_config as p_config
 
@@ -79,6 +82,22 @@ def test_filepath(filepath):
         raise PermissionError
 
     return filepath
+
+def validate_json(
+    test_obj,
+    json_schema_path
+):
+    """use jsonschema to validate object
+
+    Args:
+        test_obj (:obj:`dict`): JSON serialized dictionary
+        json_schema (str): path to jsonschema file (abspath > relpath)
+
+    Returns:
+        (bool): passed/failed validation
+
+    """
+    pass
 
 class ProsperSlidesException(Exception):
     """project-level Exception class for custom exceptions"""

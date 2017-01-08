@@ -104,7 +104,8 @@ setup(
         'rpy2==2.7.8',
         'keyring==10.1',
         'dropbox==7.1.1',
-        'ujson==1.35'
+        'ujson==1.35',
+        'jsonschema==2.5.1'
     ],
     tests_require=[
         'pytest==3.0.3'

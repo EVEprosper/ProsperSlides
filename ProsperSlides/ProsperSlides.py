@@ -66,6 +66,18 @@ def load_graph_profile(profile_filepath):
 
     return graph_profile_obj
 
+def generate_plots(plot_profile):
+    """using the plot profile, walk through and generate plots
+
+    Args:
+        plot_profile (:obj:`dict`): JSON serialized collection of plot profiles
+
+    Returns:
+        (:obj:`list` str): collection of filepaths where plots should be (in order)
+
+    """
+    pass
+
 class ProsperSlides(cli.Application):
     """Plumbum CLI application to build EVE Prosper Market Show slidedeck"""
     _log_builder = ps_helper.build_logger('ProsperSlides')  #TODO: fix ME?
@@ -113,6 +125,7 @@ class ProsperSlides(cli.Application):
         ps_helper.LOGGER = logger #TODO: this seems sloppy?
         logger.debug('hello world')
         logger.debug(self.outfile)
+        logger.debug(self.graph_profile)
 
 if __name__ == '__main__':
     ProsperSlides.run()
