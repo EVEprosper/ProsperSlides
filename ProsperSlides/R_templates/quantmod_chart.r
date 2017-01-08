@@ -5,7 +5,7 @@ market.query = 'SELECT price_date AS Date,
         avgPrice AS Close
     FROM crest_markethistory
     WHERE itemid={itemid} AND
-        regionid={region}
+        regionid={regionid}
     ORDER BY Date DESC'
 market.sqldata <- sqlQuery(emd, market.query)
 odbcClose(emd)
@@ -21,10 +21,10 @@ market.data.ts <- xts(
     order.by=market.data[,Date],
     period=7
 )
-{img_type}(
+png(
     '{img_path}',
-    width={img_X},
-    height={img_Y}
+    width={img_width},
+    height={img_height}
 )
 chartSeries(
     market.data.ts,

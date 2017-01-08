@@ -16,7 +16,6 @@
     "required_args":[
         "itemid",
         "regionid",
-        "img_type",
         "img_path",
         "img_width",
         "img_height",

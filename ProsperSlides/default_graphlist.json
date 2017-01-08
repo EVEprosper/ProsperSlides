@@ -4,7 +4,6 @@
         "required_args": {
             "itemid": 29668,
             "regionid": 10000002,
-            "img_type": "png",
             "img_path": "",
             "img_width": 1600,
             "img_height": 900,

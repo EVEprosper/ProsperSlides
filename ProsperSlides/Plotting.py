@@ -6,7 +6,9 @@ Hub for building plots
 
 from os import path
 
+import rpy2.robjects as robjects
 import rpy2
+from rpy2.robjects.packages import importr
 import ujson as json
 
 import Helpers as ps_helper
@@ -44,24 +46,24 @@ def plot(
         ))
         raise KeyError('Plot profile and metadata do not match')
 
-    r_template = r_template.format(plot_args)   #apply required_args
-
+    r_template = r_template.format_map(plot_args)   #apply required_args
+    logger.debug(r_template)
     ## import libaries for R ##
     logger.debug('-- Building up environment')
     for package in metadata['package_requires']:
         if package in metadata['package_overrides']:
             #quantmod is weird
-            util = rpy2.ropjects.packages.importr(
+            util = importr(
                 package,
                 robject_translations=metadata['package_overrides'][package]['robject_translations']
             )
         else:
-            util = rpy2.ropjects.packages.importr(package)
+            util = importr(package)
         util.chooseCRANmirror(ind=1)    #install package: https://rpy2.readthedocs.io/en/version_2.8.x/robjects_rpackages.html#installing-removing-r-packages
 
     if 'robjects' in metadata:
         for robject in metadata['robjects']:
-            rpy2.robjects.r(robject)
+            robjects.r(robject)
 
     ## Execute R script
     logger.debug('-- Executing R')
@@ -77,7 +79,7 @@ def plot(
     ## clean up before exiting ##
     logger.debug('-- Cleaning up environment')
     for package in metadata['package_required']:
-        rpy2.robjects.r(
+        robjects.r(
             'detatch("package:{0}", unload=TRUE)'.format(package)
         )
 
