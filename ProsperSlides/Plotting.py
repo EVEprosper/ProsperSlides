@@ -9,7 +9,7 @@ from os import path
 import rpy2
 import ujson as json
 
-import ProsperSlides.Helpers as ps_helper
+import Helpers as ps_helper
 
 def plot(
         plot_template,
@@ -35,7 +35,13 @@ def plot(
     )
 
     plot_args['img_path'] = plot_filename
-    if not plot_args.keys() == metadata['required_args'].keys():
+    if set(plot_args.keys()) - set(metadata['required_args']):
+        #use set() to find unique keys.  Should return empty
+        logger.debug('plot_args={0}'.format(plot_args.keys()))
+        logger.debug('metadata={0}'.format(metadata['required_args']))
+        logger.warning('unique keys={0}'.format(
+            set(plot_args.keys()) - set(metadata['required_args'])
+        ))
         raise KeyError('Plot profile and metadata do not match')
 
     r_template = r_template.format(plot_args)   #apply required_args
@@ -75,7 +81,7 @@ def plot(
             'detatch("package:{0}", unload=TRUE)'.format(package)
         )
 
-
+    return plot_args['img_path']
 
 GRAPH_TEMPLATE_PATH = ps_helper.CONFIG.get('PATHS', 'r_templates')
 def get_template(

@@ -81,31 +81,32 @@ def load_graph_profile(profile_filepath):
 
 def generate_plots(
         plot_profiles,
-        debug_output=False
+        debug_output=True
     ):
     """using the plot profile, walk through and generate plots
 
     Args:
-        plot_profile (:obj:`dict`): JSON serialized collection of plot profiles
+        plot_profile (:obj:`list`): 'plots' key, list of dicts
         debug_output (bool): flag for progress bar vs log-to-screen
     Returns:
         (:obj:`list` str): collection of filepaths where plots should be (in order)
 
     """
-    progress_bar = cli.progress.ProgressBase(
-        length=len(plot_profiles['plots']),
-        has_output=debug_output
-    )
+    logger.debug(plot_profiles)
+    #progress_bar = cli.progress.ProgressBase(
+    #    length=len(plot_profiles['plots']),
+    #    has_output=debug_output
+    #)
     plot_list = []
-    for index, plot_profile in enumerate(plot_profiles['plots']):
-        progress_bar.display()
+    index = 0
+    for plot_profile in cli.terminal.Progress(plot_profiles):
         logger.info('--plotting: ' + plot_profile['filename'])
 
         index_str = '%03d' % index
         plot_filename = '{index}_{filename}_{template}.png'.format(
             index=index_str,
             filename=plot_profile['filename'],
-            profile=plot_profile['template']
+            template=plot_profile['template']
         )
         try:
             plot_path = ps_plotting.plot(
@@ -121,12 +122,13 @@ def generate_plots(
                 '\n\tplot_profile={0}'.format(plot_profile['template']) +
                 '\n\texception={0}'.format(repr(err_msg))
             )
-            progress_bar.increment()
+            #progress_bar.increment()
+            index += 1
             continue    #continue building plots
-
+        index += 1
         plot_list.append(plot_path)
-        progress_bar.increment()
-    progress_bar.done()
+        #progress_bar.increment()
+    #progress_bar.done()
 
 class ProsperSlides(cli.Application):
     """Plumbum CLI application to build EVE Prosper Market Show slidedeck"""
@@ -176,6 +178,8 @@ class ProsperSlides(cli.Application):
         logger.debug('hello world')
         logger.debug(self.outfile)
         logger.debug(self.graph_profile)
+
+        generate_plots(list(self.graph_profile['plots']))
 
 if __name__ == '__main__':
     ProsperSlides.run()
