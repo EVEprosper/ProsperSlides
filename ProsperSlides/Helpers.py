@@ -84,8 +84,8 @@ def test_filepath(filepath):
     return filepath
 
 def validate_json(
-    test_obj,
-    json_schema_path
+        test_obj,
+        json_schema_path
 ):
     """use jsonschema to validate object
 
@@ -97,7 +97,7 @@ def validate_json(
         (bool): passed/failed validation
 
     """
-    pass
+    return True
 
 class ProsperSlidesException(Exception):
     """project-level Exception class for custom exceptions"""
