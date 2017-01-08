@@ -31,6 +31,7 @@ ec.query <- paste0(
     'GROUP BY price_date, price_time, typeid'
 )
 ec <- sqlQuery(emd, ec.query)
+odbcClose(emd)
 ec$date <- as.Date(ec$date)
 ec$typeid <- as.factor(ec$typeid)
 ec <- subset(ec, SellOrder > 0)

@@ -8,6 +8,7 @@ market.query = 'SELECT price_date AS Date,
         regionid={region}
     ORDER BY Date DESC'
 market.sqldata <- sqlQuery(emd, market.query)
+odbcClose(emd)
 n <- nrow(market.sqldata)
 market.data <- data.table(market.sqldata[1:n-1,])
 market.data$Open <- market.sqldata$Close[-1]

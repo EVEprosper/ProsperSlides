@@ -74,8 +74,8 @@ crest.query <- paste0(
 )
 crest <- sqlQuery(emd, crest.query)
 
-close(sde)
-close(emd)
+odbcClose(sde)
+odbcClose(emd)
 
 ## Mung Data ##
 crest <- subset(crest,
