@@ -9,16 +9,14 @@ To automate R, we have to use [rpy2](http://rpy2.readthedocs.io/en/version_2.8.x
 To make this at all managable, we have to use r_templates
 
 ## Making r_templates
-`.r_template` is a made-up file extension. It's a mix of executable R code and python `.format()`able tags.
-
-Along with these `.r_template` files are `.json` metadata files.  These are used as tags at load-time to configure the R connector from rpy2
+All files in the `ProsperSlides/R_templates` path are special pairs.  `.r` files with (nearly) executable R, and `.json` files with metadata hooks for [rpy2](http://rpy2.readthedocs.io/en/version_2.8.x/)
 
 This is by no means a "good" idea, but automating away the second largest time-suck in producing the [EVE Prosper Market Show](https://www.youtube.com/user/EVEProsper) we hope to free up time elsewhere.
 
 The hope is in the longer term, when a generic _Prosper Graphing_ package is developed, we can retire the entire rpy2 dependency and remove an EXTREMELY PAINFUL dependency
 
 ### Example
-`quantmod.r_template`
+`quantmod.r`
 ```r
 ### Globals ###
 typeID = {typeid}
@@ -102,9 +100,21 @@ dev.off()
 }
 ```
 
-These two files represent a matched-pair.  The `r_template` file has nearly-perfect executable code (whith `{}` bindings for python to `.format()` over).  The `.json` contains the metadata needed by rpy to properly set up the environment.
+These two files represent a matched-pair.  The `r` file has nearly-perfect executable code (whith `{}` bindings for python to `.format()` over).  The `.json` contains the metadata needed by rpy to properly set up the environment.  **TIP: use `{{}}` for bracketed sections _not_ formatted by python***
 
 This is because rpy2 handles things like object data and `library()` calls.  Otherwise, rpy2 acts like a virtual session that will execute the `.R` script given to it.
 
-**ALL `.r_template` FILES MUST BE PAIRED WITH A MATCHED `.json` FILE***
+**ALL `.r` FILES MUST BE PAIRED WITH A MATCHED `.json` FILE***
 
+## Validating r/json templates
+`test_rtemplates.py` has been included in the `Tests/` directory.  This will validate the following:
+
+1. R/json file pairs
+2. parsable json
+3. formatable R files
+4. [rpy2](http://rpy2.readthedocs.io/en/version_2.8.x/) and R prereqs per `R_requirements.txt`
+
+Things to watch out for
+
+* string types in R are not automatically handled.  Don't forget your quotes
+* R library dependencies are not automatically tracked.  Be sure to update R before running scripts
