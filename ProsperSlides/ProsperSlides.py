@@ -95,6 +95,7 @@ def generate_plots(
 
     """
     logger.debug(plot_profiles)
+    ps_plotting.PLOT_LOGGER = logger #push current logger down to Plotting module
     plot_list = []
     index = 0
     for plot_profile in cli.terminal.Progress(plot_profiles):

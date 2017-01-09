@@ -12,7 +12,12 @@ from rpy2.robjects.packages import importr
 import ujson as json
 
 import Helpers as ps_helper
+import prosper.common.prosper_utilities as p_utils
 
+PLOT_LOGGER = ps_helper.DEFAULT_LOGGER
+@p_utils.Timeit(
+    logger=PLOT_LOGGER
+)
 def plot(
         plot_template,
         plot_filename,
