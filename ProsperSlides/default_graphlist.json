@@ -40,6 +40,355 @@
             "plot_path":""
         },
         "filename": "plex-zoomin-plot"
+    },
+    {
+        "template": "RMT_plot",
+        "required_args": {
+            "img_width":1600,
+            "img_height":900,
+            "date_range":45,
+            "locationid":30000142,
+            "plot_title":"RMT Items -- AUR Normalized",
+            "plot_path":""
+        },
+        "filename": "RMT-plot"
+    },
+    {
+        "template": "skilltrade_chart",
+        "required_args": {
+            "img_width":1600,
+            "img_height":900,
+            "date_range":45,
+            "itemid":29668,
+            "locationid":30000142,
+            "plot_title":"Skill Trading",
+            "plot_path":""
+        },
+        "filename": "Skill-Trading-plot"
+    },
+    {
+        "template": "zoomin_chart",
+        "required_args": {
+            "img_width":1600,
+            "img_height":900,
+            "date_range":45,
+            "itemid":40520,
+            "locationid":30000142,
+            "plot_title":"Skill Injectors -- Jita",
+            "plot_path":""
+        },
+        "filename": "Skill-Injector-Jita"
+    },
+    {
+        "template": "nettrade_plot",
+        "required_args": {
+            "img_width":1600,
+            "img_height":900,
+            "date_range":365,
+            "locationid":10000002,
+            "plot_title":"Net Trade -- Jita",
+            "plot_path":""
+        },
+        "filename": "Net-Trade"
+    },
+    {
+        "template": "quantmod_chart",
+        "required_args": {
+            "itemid": 34,
+            "regionid": 10000002,
+            "plot_path": "",
+            "img_width": 1600,
+            "img_height": 900,
+            "plot_title": "Tritanium -- CREST History",
+            "TA_args": "addBBands(15,2);addVo();addMACD(5,15,5);addRSI();addLines(h=30, on=4);addLines(h=70, on=4)",
+            "default_subset": "last 60 days"
+        },
+        "filename": "tritanium-60d-plot"
+    },
+    {
+        "template": "zoomin_chart",
+        "required_args": {
+            "img_width":1600,
+            "img_height":900,
+            "date_range":45,
+            "itemid":34,
+            "locationid":30000142,
+            "plot_title":"Tritanium -- Intraday Prices",
+            "plot_path":""
+        },
+        "filename": "tritanium-zoomin-plot"
+    },
+    {
+        "template": "quantmod_chart",
+        "required_args": {
+            "itemid": 35,
+            "regionid": 10000002,
+            "plot_path": "",
+            "img_width": 1600,
+            "img_height": 900,
+            "plot_title": "Pyerite -- CREST History",
+            "TA_args": "addBBands(15,2);addVo();addMACD(5,15,5);addRSI();addLines(h=30, on=4);addLines(h=70, on=4)",
+            "default_subset": "last 60 days"
+        },
+        "filename": "pyerite-60d-plot"
+    },
+    {
+        "template": "zoomin_chart",
+        "required_args": {
+            "img_width":1600,
+            "img_height":900,
+            "date_range":45,
+            "itemid":35,
+            "locationid":30000142,
+            "plot_title":"Pyerite -- Intraday Prices",
+            "plot_path":""
+        },
+        "filename": "pyerite-zoomin-plot"
+    },
+    {
+        "template": "quantmod_chart",
+        "required_args": {
+            "itemid": 36,
+            "regionid": 10000002,
+            "plot_path": "",
+            "img_width": 1600,
+            "img_height": 900,
+            "plot_title": "Mexallon -- CREST History",
+            "TA_args": "addBBands(15,2);addVo();addMACD(5,15,5);addRSI();addLines(h=30, on=4);addLines(h=70, on=4)",
+            "default_subset": "last 60 days"
+        },
+        "filename": "mexallon-60d-plot"
+    },
+    {
+        "template": "zoomin_chart",
+        "required_args": {
+            "img_width":1600,
+            "img_height":900,
+            "date_range":45,
+            "itemid":36,
+            "locationid":30000142,
+            "plot_title":"Mexallon -- Intraday Prices",
+            "plot_path":""
+        },
+        "filename": "mexallon-zoomin-plot"
+    },
+    {
+        "template": "quantmod_chart",
+        "required_args": {
+            "itemid": 37,
+            "regionid": 10000002,
+            "plot_path": "",
+            "img_width": 1600,
+            "img_height": 900,
+            "plot_title": "Isogen -- CREST History",
+            "TA_args": "addBBands(15,2);addVo();addMACD(5,15,5);addRSI();addLines(h=30, on=4);addLines(h=70, on=4)",
+            "default_subset": "last 60 days"
+        },
+        "filename": "isogen-60d-plot"
+    },
+    {
+        "template": "zoomin_chart",
+        "required_args": {
+            "img_width":1600,
+            "img_height":900,
+            "date_range":45,
+            "itemid":37,
+            "locationid":30000142,
+            "plot_title":"Isogen -- Intraday Prices",
+            "plot_path":""
+        },
+        "filename": "isogen-zoomin-plot"
+    },
+    {
+        "template": "quantmod_chart",
+        "required_args": {
+            "itemid": 38,
+            "regionid": 10000002,
+            "plot_path": "",
+            "img_width": 1600,
+            "img_height": 900,
+            "plot_title": "Noxcium -- CREST History",
+            "TA_args": "addBBands(15,2);addVo();addMACD(5,15,5);addRSI();addLines(h=30, on=4);addLines(h=70, on=4)",
+            "default_subset": "last 60 days"
+        },
+        "filename": "noxcium-60d-plot"
+    },
+    {
+        "template": "zoomin_chart",
+        "required_args": {
+            "img_width":1600,
+            "img_height":900,
+            "date_range":45,
+            "itemid":38,
+            "locationid":30000142,
+            "plot_title":"Noxcium -- Intraday Prices",
+            "plot_path":""
+        },
+        "filename": "noxcium-zoomin-plot"
+    },
+    {
+        "template": "quantmod_chart",
+        "required_args": {
+            "itemid": 39,
+            "regionid": 10000002,
+            "plot_path": "",
+            "img_width": 1600,
+            "img_height": 900,
+            "plot_title": "Zydrine -- CREST History",
+            "TA_args": "addBBands(15,2);addVo();addMACD(5,15,5);addRSI();addLines(h=30, on=4);addLines(h=70, on=4)",
+            "default_subset": "last 60 days"
+        },
+        "filename": "zydrine-60d-plot"
+    },
+    {
+        "template": "zoomin_chart",
+        "required_args": {
+            "img_width":1600,
+            "img_height":900,
+            "date_range":45,
+            "itemid":39,
+            "locationid":30000142,
+            "plot_title":"Zydrine -- Intraday Prices",
+            "plot_path":""
+        },
+        "filename": "zydrine-zoomin-plot"
+    },
+    {
+        "template": "quantmod_chart",
+        "required_args": {
+            "itemid": 40,
+            "regionid": 10000002,
+            "plot_path": "",
+            "img_width": 1600,
+            "img_height": 900,
+            "plot_title": "Megacyte -- CREST History",
+            "TA_args": "addBBands(15,2);addVo();addMACD(5,15,5);addRSI();addLines(h=30, on=4);addLines(h=70, on=4)",
+            "default_subset": "last 60 days"
+        },
+        "filename": "megacyte-60d-plot"
+    },
+    {
+        "template": "zoomin_chart",
+        "required_args": {
+            "img_width":1600,
+            "img_height":900,
+            "date_range":45,
+            "itemid":40,
+            "locationid":30000142,
+            "plot_title":"Megacyte -- Intraday Prices",
+            "plot_path":""
+        },
+        "filename": "megacyte-zoomin-plot"
+    },
+    {
+        "template": "quantmod_chart",
+        "required_args": {
+            "itemid": 11399,
+            "regionid": 10000002,
+            "plot_path": "",
+            "img_width": 1600,
+            "img_height": 900,
+            "plot_title": "Morphite -- CREST History",
+            "TA_args": "addBBands(15,2);addVo();addMACD(5,15,5);addRSI();addLines(h=30, on=4);addLines(h=70, on=4)",
+            "default_subset": "last 60 days"
+        },
+        "filename": "morphite-60d-plot"
+    },
+    {
+        "template": "zoomin_chart",
+        "required_args": {
+            "img_width":1600,
+            "img_height":900,
+            "date_range":45,
+            "itemid":11399,
+            "locationid":30000142,
+            "plot_title":"Morphite -- Intraday Prices",
+            "plot_path":""
+        },
+        "filename": "morphite-zoomin-plot"
+    },
+
+    {
+        "template": "zoomin_chart",
+        "required_args": {
+            "img_width":1600,
+            "img_height":900,
+            "date_range":45,
+            "itemid":16275,
+            "locationid":30000142,
+            "plot_title":"Strontium Clathrates -- Intraday Prices",
+            "plot_path":""
+        },
+        "filename": "strontium-zoomin-plot"
+    },
+    {
+        "template": "zoomin_chart",
+        "required_args": {
+            "img_width":1600,
+            "img_height":900,
+            "date_range":45,
+            "itemid":16272,
+            "locationid":30000142,
+            "plot_title":"Heavy Water -- Intraday Prices",
+            "plot_path":""
+        },
+        "filename": "heavy-water-zoomin-plot"
+    },
+    {
+        "template": "group_plot",
+        "required_args": {
+            "img_width":1600,
+            "img_height":900,
+            "date_range":45,
+            "itemids":"16670,16671,16672,16673,16678,16679,16680,16681,16682,16683,17317,33359,33360,33361,33362",
+            "locationid":30000142,
+            "plot_title":"Advanced Materials -- Jita",
+            "plot_path":"",
+            "plot_free_y":"FALSE"
+        },
+        "filename": "adv-mats-zoomin-plot"
+    },
+    {
+        "template": "group_plot",
+        "required_args": {
+            "img_width":1600,
+            "img_height":900,
+            "date_range":45,
+            "itemids":"11377,12032,12034,12038",
+            "locationid":30000142,
+            "plot_title":"Bombers -- Jita",
+            "plot_path":"",
+            "plot_free_y":"TRUE"
+        },
+        "filename": "bombers-zoomin-plot"
+    },
+    {
+        "template": "group_plot",
+        "required_args": {
+            "img_width":1600,
+            "img_height":900,
+            "date_range":45,
+            "itemids":"29984,29986,29988,29990",
+            "locationid":30000142,
+            "plot_title":"T3 Cruisers -- Jita",
+            "plot_path":"",
+            "plot_free_y":"TRUE"
+        },
+        "filename": "t3c-zoomin-plot"
+    },
+    {
+        "template": "group_plot",
+        "required_args": {
+            "img_width":1600,
+            "img_height":900,
+            "date_range":45,
+            "itemids":"29984,29986,29988,29990",
+            "locationid":30000142,
+            "plot_title":"T3 Cruisers -- Jita",
+            "plot_path":"",
+            "plot_free_y":"TRUE"
+        },
+        "filename": "t3c-zoomin-plot"
     }
     ]
 }
