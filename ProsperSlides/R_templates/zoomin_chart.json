@@ -10,7 +10,7 @@
         "cowplot"
     ],
     "robjects":[
-        "emd <- odbcConnect('evemarketdata')"
+        "emd <- odbcConnect('randomboy_new')"
     ],
     "required_args":[
         "img_width",

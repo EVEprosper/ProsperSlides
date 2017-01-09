@@ -51,16 +51,19 @@ def plot(
     ## import libaries for R ##
     logger.debug('-- Building up environment')
     for package in metadata['package_requires']:
+        robject_overrides = None
         if 'package_overrides' in metadata:
             if package in metadata['package_overrides']:
-                #quantmod is weird
-                util = importr(
-                    package,
-                    robject_translations=metadata\
-                    ['package_overrides'][package]['robject_translations']
-                )
+                robject_overrides = metadata['package_overrides'][package]['robject_translations']
+
+        if robject_overrides:
+            util = importr(
+                package,
+                robject_translations=robject_overrides
+            )
         else:
             util = importr(package)
+
         #util.chooseCRANmirror(ind=1)    #install package: https://rpy2.readthedocs.io/en/version_2.8.x/robjects_rpackages.html#installing-removing-r-packages
 
     if 'robjects' in metadata:
@@ -87,7 +90,7 @@ def plot(
     #        'detach("package:{0}", unload=TRUE)'.format(package)
     #    )
 
-    return plot_args['img_path']
+    return plot_args['plot_path']
 
 GRAPH_TEMPLATE_PATH = ps_helper.CONFIG.get('PATHS', 'r_templates')
 def get_template(
