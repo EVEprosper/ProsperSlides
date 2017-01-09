@@ -19,6 +19,7 @@ Windows-based collection of apps to help publish the [EVE Prosper Market Show](h
 * Python 3.5+
     * NOTE: rpy2 wheel included for windows install.  [use precompiled wheel](http://www.lfd.uci.edu/~gohlke/pythonlibs/#rpy2)
     * [ProsperCommon](https://manage.fury.io/dashboard/lockefox/package/UzNwMDN) hosted at GemFury.  `--extra-index-url=https://pypi.fury.io/jyd5j4yse83c9UW64tP7/lockefox/`
+* [Dropbox](https://www.dropbox.com/install) client application
 
 TODO: include `/Scripts` for environment setup and rpy2 validation
 
