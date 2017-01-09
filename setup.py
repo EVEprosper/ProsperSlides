@@ -54,7 +54,7 @@ class PyTest(TestCommand):
 
     def initialize_options(self):
         TestCommand.initialize_options(self)
-        self.pytest_args = ['test']    #load defaults here
+        self.pytest_args = ['Tests']    #load defaults here
 
     def run_tests(self):
         import shlex

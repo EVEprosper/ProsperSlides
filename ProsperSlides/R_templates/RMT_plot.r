@@ -3,8 +3,8 @@ plot.height = {img_height}
 plot.range = {date_range}
 plot.typeids = c(29668,34133,34132,40519)
 plot.locationid = {locationid}
-plot.title = {plot_title}
-plot.path = {plot_path}
+plot.title = '{plot_title}'
+plot.path = '{plot_path}'
 
 date.min <- Sys.Date() - plot.range
 plot.typeids.str <- paste(plot.typeids, collapse=',')
@@ -18,7 +18,7 @@ event.query <- paste0(
 event <- sqlQuery(emd, event.query)
 event$datetime <- as.POSIXlt(event$datetime, tz='GMT')
 do_lines <- TRUE
-if(nrow(event)==0){do_lines <- FALSE}
+if(nrow(event)==0){{do_lines <- FALSE}}
 
 ec.query <- paste0(
     'SELECT price_date AS `date`, price_time AS `hour`, locationid, typeid, ',
@@ -48,17 +48,17 @@ ec$locationName <- solarsystem.name
 
 type_list <- unique(ec$typeid)
 ec$typeName <- NA
-for(type.index in 1:length(type_list)){
+for(type.index in 1:length(type_list)){{
     type.name <- ''
     type.id <- type_list[type.index]
     type.addr <- paste0(CREST_BASE, 'inventory/types/', type.id, '/')
     type.json <- fromJSON(readLines(type.addr))
     type.name <- type.json$name
     ec$typeName[ec$typeid==type.id] <- type.name
-}
+}}
 
 ## Plot Theme ##
-theme_dark <- function( ... ) {
+theme_dark <- function( ... ) {{
   theme(
     text = element_text(color="gray90"),
     title = element_text(size=rel(2),hjust=0.05,vjust=3.5),
@@ -80,7 +80,7 @@ theme_dark <- function( ... ) {
     strip.background = element_rect(fill="gray1"),
     strip.text = element_text(size=rel(1.2))
   ) + theme(...)
-}
+}}
 
 ec <- subset(ec, SellOrder > 0)
 plot.data <- ec
@@ -111,7 +111,7 @@ plot <- plot + scale_y_continuous(
     labels=function(x)sprintf('%.1fB', x/1e9),
     position='right'
 )
-if(do_lines){
+if(do_lines){{
     plot <- plot + geom_vline(
         xintercept=as.numeric(event$datetime),
         linetype=2,
@@ -129,7 +129,7 @@ if(do_lines){
         data=event,
         inherit.aes=FALSE
     )
-}
+}}
 plot <- plot + labs(
     title=plot.title,
     color='PriceKey',

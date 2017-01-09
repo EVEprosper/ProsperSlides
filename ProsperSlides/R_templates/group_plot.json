@@ -3,7 +3,7 @@
         "RODBC",
         "ggplot2",
         "grid",
-        "reshape",
+        "reshape"
     ],
     "robjects":[
         "emd <- odbcConnect('randomboy_new')"

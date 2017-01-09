@@ -2,8 +2,8 @@ plot.width = {img_width}
 plot.height = {img_height}
 plot.range = {date_range}
 plot.locationid = {locationid}
-plot.title = {plot_title}
-plot.path = {plot_path}
+plot.title = '{plot_title}'
+plot.path = '{plot_path}'
 
 date.min <- Sys.Date() - plot.range
 
@@ -17,7 +17,7 @@ event.query <- paste0(
 event <- sqlQuery(emd, event.query)
 event$datetime <- as.POSIXlt(event$datetime, tz='GMT')
 do_lines <- TRUE
-if(nrow(event)==0){do_lines <- FALSE}
+if(nrow(event)==0){{do_lines <- FALSE}}
 
 ## SDE Fetch ##
 types.query <- paste0(
@@ -204,7 +204,7 @@ plot.levels <- seq(
     by=4e12
 )
 ## Plot Theme ##
-theme_dark <- function( ... ) {
+theme_dark <- function( ... ) {{
   theme(
     text = element_text(color="gray90"),
     title = element_text(size=rel(2.5),hjust=0.05,vjust=3.5),
@@ -226,7 +226,7 @@ theme_dark <- function( ... ) {
     strip.background = element_rect(fill="#252525"),
     strip.text = element_text(size=rel(1.2))
   ) + theme(...)
-}
+}}
 
 ## Build Plot ##
 plot <- ggplot(
@@ -246,7 +246,7 @@ plot <- plot + geom_line(
         y=value,
         color=Label)
 )
-if(do_lines){
+if(do_lines){{
     plot <- plot + geom_vline(
         xintercept=as.numeric(event$datetime),
         linetype=2,
@@ -264,7 +264,7 @@ if(do_lines){
         data=event,
         inherit.aes=FALSE
     )
-}
+}}
 plot <- plot + theme_dark()
 plot <- plot + scale_y_log10(labels=function(x)sprintf('%.2fT', x/1e12))
 plot <- plot + labs(

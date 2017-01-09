@@ -2,8 +2,8 @@ plot.width = {img_width}
 plot.height = {img_height}
 plot.range = {date_range}
 plot.locationid = {locationid}
-plot.title = {plot_title}
-plot.path = {plot_path}
+plot.title = '{plot_title}'
+plot.path = '{plot_path}'
 
 ExtractorID = 40519
 InjectorID  = 40520
@@ -31,7 +31,7 @@ event.query <- paste0(
 event <- sqlQuery(emd, event.query)
 event$datetime <- as.POSIXlt(event$datetime, tz='GMT')
 do_lines <- TRUE
-if(nrow(event)==0){do_lines <- FALSE}
+if(nrow(event)==0){{do_lines <- FALSE}}
 
 ## Get Data ##
 ec.query <- paste0(
@@ -62,17 +62,17 @@ ec$locationName <- solarsystem.name
 
 type_list <- unique(ec$typeid)
 ec$typeName <- NA
-for(type.index in 1:length(type_list)){
+for(type.index in 1:length(type_list)){{
     type.name <- ''
     type.id <- type_list[type.index]
     type.addr <- paste0(CREST_BASE, 'inventory/types/', type.id, '/')
     type.json <- fromJSON(readLines(type.addr))
     type.name <- type.json$name
     ec$typeName[ec$typeid==type.id] <- type.name
-}
+}}
 
 ## Plot Theme ##
-theme_dark <- function( ... ) {
+theme_dark <- function( ... ) {{
   theme(
     text = element_text(color="gray90"),
     title = element_text(size=rel(2),hjust=0.05,vjust=3.5),
@@ -94,7 +94,7 @@ theme_dark <- function( ... ) {
     strip.background = element_rect(fill="gray1"),
     strip.text = element_text(size=rel(1.2))
   ) + theme(...)
-}
+}}
 
 ## Mung Data ##
 skill.inj <- subset(ec, typeid==InjectorID)
@@ -198,7 +198,7 @@ plot <- plot + geom_text(
     vjust=-1.25,
     size=5,
     inherit.aes=FALSE)
-if(do_lines){
+if(do_lines){{
     plot <- plot + geom_vline(
         xintercept=as.numeric(event$datetime),
         linetype=2,
@@ -217,7 +217,7 @@ if(do_lines){
         size=5,
         inherit.aes=FALSE
     )
-}
+}}
 
 ## Print Plot To File ##
 png(

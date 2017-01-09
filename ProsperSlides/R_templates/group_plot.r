@@ -3,8 +3,8 @@ plot.height = {img_height}
 plot.range = {date_range}
 plot.typeids = c({itemids})
 plot.locationid = {locationid}
-plot.title = {plot_title}
-plot.path = {plot_path}
+plot.title = '{plot_title}'
+plot.path = '{plot_path}'
 plot.free_y = {plot_free_y}
 
 date.min <- Sys.Date() - plot.range
@@ -19,7 +19,7 @@ event.query <- paste0(
 event <- sqlQuery(emd, event.query)
 event$datetime <- as.POSIXlt(event$datetime, tz='GMT')
 do_lines <- TRUE
-if(nrow(event)==0){do_lines <- FALSE}
+if(nrow(event)==0){{do_lines <- FALSE}}
 
 ## Get Data ##
 ec.query <- paste0(
@@ -50,17 +50,17 @@ ec$locationName <- solarsystem.name
 
 type_list <- unique(ec$typeid)
 ec$typeName <- NA
-for(type.index in 1:length(type_list)){
+for(type.index in 1:length(type_list)){{
     type.name <- ''
     type.id <- type_list[type.index]
     type.addr <- paste0(CREST_BASE, 'inventory/types/', type.id, '/')
     type.json <- fromJSON(readLines(type.addr))
     type.name <- type.json$name
     ec$typeName[ec$typeid==type.id] <- type.name
-}
+}}
 
 ## Plot Theme ##
-theme_dark <- function( ... ) {
+theme_dark <- function( ... ) {{
   theme(
     text = element_text(color="gray90"),
     title = element_text(size=rel(2.5),hjust=0.05,vjust=3.5),
@@ -82,7 +82,7 @@ theme_dark <- function( ... ) {
     strip.background = element_rect(fill="#252525"),
     strip.text = element_text(size=rel(1.2))
   ) + theme(...)
-}
+}}
 
 ## Mung Data ##
 plot.data <- melt.data.frame(
@@ -106,11 +106,11 @@ plot <- ggplot(
         color=variable)
 )
 plot <- plot + geom_line()
-if(plot.free_y){
+if(plot.free_y){{
     plot <- plot + facet_wrap(~typeName, scales='free_y')
-}else{
+}}else{{
     plot <- plot + facet_wrap(~typeName)
-}
+}}
 plot <- plot + theme_dark()
 plot <- plot + labs(
     title=plot.title,
@@ -118,36 +118,36 @@ plot <- plot + labs(
     x='date',
     y='price'
 )
-if(do_lines){
+if(do_lines){{
     plot <- plot + geom_vline(
         xintercept=as.numeric(event$datetime),
         linetype=2,
         color='white'
     )
-}
-if(price.min_scale > 1e9){
+}}
+if(price.min_scale > 1e9){{
     plot <- plot + scale_y_continuous(
         limit=c(price.min_scale, NA),
         labels=function(x)sprintf('%.0fB', x/1e9),
         position='right'
     )
-}else if(price.min_scale > 1e6){
+}}else if(price.min_scale > 1e6){{
     plot <- plot + scale_y_continuous(
         limit=c(price.min_scale, NA),
         labels=function(x)sprintf('%.0fM', x/1e6),
         position='right'
     )
-}else if(price.min_scale > 1e3){
+}}else if(price.min_scale > 1e3){{
     plot <- plot + scale_y_continuous(
         limit=c(price.min_scale, NA),
         labels=function(x)sprintf('%.0fK', x/1e3),
         position='right'
     )
-}else{
+}}else{{
     plot <- plot + scale_y_continuous(
         position='right'
     )
-}
+}}
 
 ## Print Plot To File ##
 png(
