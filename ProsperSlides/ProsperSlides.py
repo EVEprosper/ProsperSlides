@@ -93,14 +93,14 @@ def generate_plots(
 
     """
     logger.debug(plot_profiles)
-    #progress_bar = cli.progress.ProgressBase(
-    #    length=len(plot_profiles['plots']),
-    #    has_output=debug_output
-    #)
     plot_list = []
     index = 0
     for plot_profile in cli.terminal.Progress(plot_profiles):
-        logger.info('--plotting: ' + plot_profile['filename'])
+    #for index, plot_profile in enumerate(plot_profiles):
+        logger.info(
+            '%03d:%03d--plotting: ' % (index+1, len(plot_profiles)) +
+            plot_profile['filename']
+        )
 
         index_str = '%03d' % index
         plot_filename = '{index}_{filename}_{template}.png'.format(
@@ -122,13 +122,10 @@ def generate_plots(
                 '\n\tplot_profile={0}'.format(plot_profile['template']) +
                 '\n\texception={0}'.format(repr(err_msg))
             )
-            #progress_bar.increment()
             index += 1
             continue    #continue building plots
         index += 1
         plot_list.append(plot_path)
-        #progress_bar.increment()
-    #progress_bar.done()
 
 class ProsperSlides(cli.Application):
     """Plumbum CLI application to build EVE Prosper Market Show slidedeck"""

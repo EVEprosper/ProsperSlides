@@ -1,5 +1,6 @@
 {
-    "plots": [{
+    "plots": [
+    {
         "template": "quantmod_chart",
         "required_args": {
             "itemid": 29668,
@@ -12,8 +13,8 @@
             "default_subset": "last 60 days"
         },
         "filename": "plex-60d-plot"
-    }],
-    "plots": [{
+    },
+    {
         "template": "quantmod_chart",
         "required_args": {
             "itemid": 29668,
@@ -26,5 +27,6 @@
             "default_subset": "last 365 days"
         },
         "filename": "plex-1yr-plot"
-    }]
+    }
+    ]
 }
