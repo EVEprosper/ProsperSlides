@@ -24,6 +24,7 @@ CONFIG_ABSPATH = path.join(HERE, 'ProsperSlides.cfg')
 config = ps_helper.CONFIG
 logger = ps_helper.DEFAULT_LOGGER
 
+TODAY = datetime.today().strftime('%Y-%m-%d')
 def path_platform(filepath):
     """figure out which imagehost/sharing platform is being used
 
@@ -81,13 +82,14 @@ def load_graph_profile(profile_filepath):
 
 def generate_plots(
         plot_profiles,
-        debug_output=True
+        base_plot_dir,
     ):
     """using the plot profile, walk through and generate plots
 
     Args:
         plot_profile (:obj:`list`): 'plots' key, list of dicts
-        debug_output (bool): flag for progress bar vs log-to-screen
+        base_plot_dir (str): where to put plots
+
     Returns:
         (:obj:`list` str): collection of filepaths where plots should be (in order)
 
@@ -108,6 +110,7 @@ def generate_plots(
             filename=plot_profile['filename'],
             template=plot_profile['template']
         )
+        plot_filename = path.join(base_plot_dir, plot_filename)
         try:
             plot_path = ps_plotting.plot(
                 plot_profile['template'],
@@ -145,7 +148,13 @@ class ProsperSlides(cli.Application):
         ps_helper.LOGGER = self._log_builder.logger
 
     outfile = ps_helper.test_filepath(
-        path.join(local.env.home, 'Dropbox', 'Prosper Shownotes', 'Plots')
+        path.join(
+            local.env.home,
+            'Dropbox',
+            'Prosper Shownotes',
+            'Plots',
+            TODAY
+        )
     )
     platform = ps_helper.HostPlatform.ERROR
     @cli.switch(
@@ -176,7 +185,10 @@ class ProsperSlides(cli.Application):
         logger.debug(self.outfile)
         logger.debug(self.graph_profile)
 
-        generate_plots(list(self.graph_profile['plots']))
+        generate_plots(
+            list(self.graph_profile['plots']),
+            self.outfile
+        )
 
 if __name__ == '__main__':
     ProsperSlides.run()

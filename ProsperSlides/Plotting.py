@@ -35,7 +35,7 @@ def plot(
         plot_template,
         logger=logger
     )
-
+    plot_filename = plot_filename.replace('\\', '/')
     plot_args['img_path'] = plot_filename
     if set(plot_args.keys()) - set(metadata['required_args']):
         #use set() to find unique keys.  Should return empty
