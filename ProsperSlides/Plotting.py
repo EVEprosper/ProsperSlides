@@ -36,7 +36,7 @@ def plot(
         logger=logger
     )
     plot_filename = plot_filename.replace('\\', '/')
-    plot_args['img_path'] = plot_filename
+    plot_args['plot_path'] = plot_filename
     if set(plot_args.keys()) - set(metadata['required_args']):
         #use set() to find unique keys.  Should return empty
         logger.debug('plot_args={0}'.format(plot_args.keys()))
@@ -51,12 +51,14 @@ def plot(
     ## import libaries for R ##
     logger.debug('-- Building up environment')
     for package in metadata['package_requires']:
-        if package in metadata['package_overrides']:
-            #quantmod is weird
-            util = importr(
-                package,
-                robject_translations=metadata['package_overrides'][package]['robject_translations']
-            )
+        if 'package_overrides' in metadata:
+            if package in metadata['package_overrides']:
+                #quantmod is weird
+                util = importr(
+                    package,
+                    robject_translations=metadata\
+                    ['package_overrides'][package]['robject_translations']
+                )
         else:
             util = importr(package)
         #util.chooseCRANmirror(ind=1)    #install package: https://rpy2.readthedocs.io/en/version_2.8.x/robjects_rpackages.html#installing-removing-r-packages

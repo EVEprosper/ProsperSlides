@@ -5,10 +5,10 @@
         "required_args": {
             "itemid": 29668,
             "regionid": 10000002,
-            "img_path": "",
+            "plot_path": "",
             "img_width": 1600,
             "img_height": 900,
-            "plot_title": "PLEX",
+            "plot_title": "PLEX -- CREST History",
             "TA_args": "addBBands(15,2);addVo();addMACD(5,15,5);addRSI();addLines(h=30, on=4);addLines(h=70, on=4)",
             "default_subset": "last 60 days"
         },
@@ -19,14 +19,27 @@
         "required_args": {
             "itemid": 29668,
             "regionid": 10000002,
-            "img_path": "",
+            "plot_path": "",
             "img_width": 1600,
             "img_height": 900,
-            "plot_title": "PLEX",
+            "plot_title": "PLEX -- 1 Year",
             "TA_args": "addBBands(15,2);addVo();addMACD(5,15,5);addRSI();addLines(h=30, on=4);addLines(h=70, on=4)",
             "default_subset": "last 365 days"
         },
         "filename": "plex-1yr-plot"
+    },
+    {
+        "template": "zoomin_chart",
+        "required_args": {
+            "img_width":1600,
+            "img_height":900,
+            "date_range":45,
+            "itemid":29668,
+            "locationid":30000142,
+            "plot_title":"PLEX -- Intraday Prices",
+            "plot_path":""
+        },
+        "filename": "plex-zoomin-plot"
     }
     ]
 }

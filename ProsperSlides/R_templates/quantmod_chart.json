@@ -16,7 +16,7 @@
     "required_args":[
         "itemid",
         "regionid",
-        "img_path",
+        "plot_path",
         "img_width",
         "img_height",
         "plot_title",

@@ -22,7 +22,7 @@ market.data.ts <- xts(
     period=7
 )
 png(
-    '{img_path}',
+    '{plot_path}',
     width={img_width},
     height={img_height}
 )

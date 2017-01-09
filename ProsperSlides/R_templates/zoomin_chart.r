@@ -3,8 +3,8 @@ plot.height = {img_height}
 plot.range = {date_range}
 plot.typeid = {itemid}
 plot.locationid = {locationid}
-plot.title = {plot_title}
-plot.path = {plot_path}
+plot.title = '{plot_title}'
+plot.path = '{plot_path}'
 
 date.min <- Sys.Date() - plot.range
 
@@ -18,7 +18,9 @@ event.query <- paste0(
 event <- sqlQuery(emd, event.query)
 event$datetime <- as.POSIXlt(event$datetime, tz='GMT')
 do_lines <- TRUE
-if(nrow(event)==0){do_lines <- FALSE}
+if(nrow(event)==0){{
+    do_lines <- FALSE
+}}
 
 ## Get Data ##
 ec.query <- paste0(
@@ -55,7 +57,7 @@ ec$locationName <- solarsystem.name
 ec$typeName <- type.name
 
 ## Plot Theme ##
-theme_dark <- function( ... ) {
+theme_dark <- function( ... ) {{
   theme(
     text = element_text(color="gray90"),
     title = element_text(size=rel(2.5),hjust=0.05,vjust=3.5),
@@ -77,7 +79,7 @@ theme_dark <- function( ... ) {
     strip.background = element_rect(fill="#252525"),
     strip.text = element_text(size=rel(1.2))
   ) + theme(...)
-}
+}}
 
 ## Mung Data ##
 plot.data <- subset(ec, typeid==plot.typeid & locationid==plot.locationid) #FIXME: extra?
@@ -120,7 +122,7 @@ plot.price <- plot.price + labs(
     y='price',
     color='key'
 )
-if(do_lines){
+if(do_lines){{
     plot.price <- plot.price + geom_vline(
         xintercept=as.numeric(event$datetime),
         linetype=2,
@@ -137,30 +139,30 @@ if(do_lines){
         hjust=0,
         data=event
     )
-}
-if(price.max_scale > 1e9){
+}}
+if(price.max_scale > 1e9){{
     plot.price <- plot.price + scale_y_continuous(
         limit=c(price.min_scale, NA),
         labels=function(x)sprintf('%.2fB', x/1e9),
         position='right'
     )
-}else if(price.max_scale > 1e6){
+}}else if(price.max_scale > 1e6){{
     plot.price <- plot.price + scale_y_continuous(
         limit=c(price.min_scale, NA),
         labels=function(x)sprintf('%.2fM', x/1e6),
         position='right'
     )
-}else if(price.max_scale > 1e3){
+}}else if(price.max_scale > 1e3){{
     plot.price <- plot.price + scale_y_continuous(
         limit=c(price.min_scale, NA),
         labels=function(x)sprintf('%.2fK', x/1e3),
         position='right'
     )
-}else{
+}}else{{
     plot.price <- plot.price + scale_y_continuous(
         position='right'
     )
-}
+}}
 plot.price <- plot.price + theme_dark()
 plot.price <- plot.price + scale_color_manual(
     values=c(
@@ -182,36 +184,36 @@ plot.volume <- plot.volume + labs(
     y='volume',
     color='key'
 )
-if(do_lines){
+if(do_lines){{
     plot.volume <- plot.volume + geom_vline(
         xintercept=as.numeric(event$datetime),
         linetype=2,
         color='white'
     )
-}
-if(volume.max_scale > 1e9){
+}}
+if(volume.max_scale > 1e9){{
     plot.volume <- plot.volume + scale_y_continuous(
         limit=c(volume.min_scale, NA),
         labels=function(x)sprintf('%.2fB', x/1e9),
         position='right'
     )
-}else if(volume.max_scale > 1e6){
+}}else if(volume.max_scale > 1e6){{
     plot.volume <- plot.volume + scale_y_continuous(
         limit=c(volume.min_scale, NA),
         labels=function(x)sprintf('%.2fM', x/1e6),
         position='right'
     )
-}else if(volume.max_scale > 1e3){
+}}else if(volume.max_scale > 1e3){{
     plot.volume <- plot.volume + scale_y_continuous(
         limit=c(volume.min_scale, NA),
         labels=function(x)sprintf('%.2fK', x/1e3),
         position='right'
     )
-}else{
+}}else{{
     plot.volume <- plot.price + scale_y_continuous(
         position='right'
     )
-}
+}}
 plot.volume <- plot.volume + theme_dark()
 plot.volume <- plot.volume + scale_color_manual(
     values=c(
