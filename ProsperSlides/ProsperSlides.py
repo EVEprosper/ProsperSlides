@@ -98,6 +98,7 @@ def generate_plots(
     ps_plotting.PLOT_LOGGER = logger #push current logger down to Plotting module
     plot_list = []
     index = 0
+
     for plot_profile in cli.terminal.Progress(plot_profiles):
     #for index, plot_profile in enumerate(plot_profiles):
         logger.info(
@@ -186,6 +187,7 @@ class ProsperSlides(cli.Application):
         logger.debug(self.outfile)
         logger.debug(self.graph_profile)
 
+        print('-- Building Plots in: {0} --'.format(self.outfile))
         generate_plots(
             list(self.graph_profile['plots']),
             self.outfile
