@@ -141,4 +141,12 @@ plot <- plot + scale_color_manual(
     "Nitrogen Isotopes"="#2169E0",
     "Helium Isotopes"="#EA8B25")
 )
+
+## Print Plot To File ##
+png(
+    plot.path,
+    width=plot.width,
+    height=plot.height
+)
 print(plot)
+dev.off()

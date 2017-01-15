@@ -306,7 +306,18 @@
         },
         "filename": "morphite-zoomin-plot"
     },
-
+    {
+        "template": "fuel_isotopes_chart",
+        "required_args": {
+            "img_width":1600,
+            "img_height":900,
+            "date_range":90,
+            "locationid":30000142,
+            "plot_title":"Fuel Isotopes",
+            "plot_path":""
+        },
+        "filename": "fuel-isotopes-plot"
+    },
     {
         "template": "zoomin_chart",
         "required_args": {
