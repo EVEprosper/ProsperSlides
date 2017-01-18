@@ -313,10 +313,23 @@
             "img_height":900,
             "date_range":90,
             "locationid":30000142,
-            "plot_title":"Fuel Isotopes",
+            "plot_title":"Fuel Isotopes -- Intraday Prices Jita",
             "plot_path":""
         },
         "filename": "fuel-isotopes-plot"
+    },
+    {
+        "template": "fuel_blocks_chart",
+        "required_args": {
+            "img_width":1600,
+            "img_height":900,
+            "date_range":90,
+            "locationid":30000142,
+            "plot_title":"Fuel Blocks + Build Costs -- Intraday Prices Jita",
+            "industry_fee":2,
+            "plot_path"
+        },
+        "filename": "fuel-blocks-plot"
     },
     {
         "template": "zoomin_chart",
