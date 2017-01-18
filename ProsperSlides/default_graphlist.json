@@ -367,9 +367,51 @@
             "locationid":30000142,
             "plot_title":"Advanced Materials -- Jita",
             "plot_path":"",
-            "plot_free_y":"FALSE"
+            "plot_free_y":"TRUE"
         },
-        "filename": "adv-mats-zoomin-plot"
+        "filename": "adv-mats-group-plot"
+    },
+    {
+        "template": "group_plot",
+        "required_args": {
+            "img_width":1600,
+            "img_height":900,
+            "date_range":45,
+            "itemids":"2867,2868,2869,2870,2871,2872,2875,2876",
+            "locationid":30000142,
+            "plot_title":"PI4 Materials -- Jita",
+            "plot_path":"",
+            "plot_free_y":"TRUE"
+        },
+        "filename": "pi4-group-plot"
+    },
+    {
+        "template": "group_plot",
+        "required_args": {
+            "img_width":1600,
+            "img_height":900,
+            "date_range":45,
+            "itemids":"25595,25605,25596,25600,25599,25604,25591,25590,25597,25592,25601,25589,25603,25588,25593,25594,25602,25598,25606",
+            "locationid":30000142,
+            "plot_title":"T1 Salvage -- Jita",
+            "plot_path":"",
+            "plot_free_y":"TRUE"
+        },
+        "filename": "t1-salvage-group-plot"
+    },
+    {
+        "template": "group_plot",
+        "required_args": {
+            "img_width":1600,
+            "img_height":900,
+            "date_range":45,
+            "itemids":"25616,25622,25623,25611,25615,25625,25621,25624,25608,25620,25619,25610,25618,25609,25617,25613,25614,25607,25612",
+            "locationid":30000142,
+            "plot_title":"T2 Salvage -- Jita",
+            "plot_path":"",
+            "plot_free_y":"TRUE"
+        },
+        "filename": "t2-salvage-group-plot"
     },
     {
         "template": "group_plot",
@@ -381,9 +423,9 @@
             "locationid":30000142,
             "plot_title":"Bombers -- Jita",
             "plot_path":"",
-            "plot_free_y":"TRUE"
+            "plot_free_y":"FALSE"
         },
-        "filename": "bombers-zoomin-plot"
+        "filename": "bombers-group-plot"
     },
     {
         "template": "group_plot",
@@ -395,9 +437,9 @@
             "locationid":30000142,
             "plot_title":"T3 Cruisers -- Jita",
             "plot_path":"",
-            "plot_free_y":"TRUE"
+            "plot_free_y":"FALSE"
         },
-        "filename": "t3c-zoomin-plot"
+        "filename": "t3c-group-plot"
     },
     {
         "template": "group_plot",
@@ -405,13 +447,41 @@
             "img_width":1600,
             "img_height":900,
             "date_range":45,
-            "itemids":"29984,29986,29988,29990",
+            "itemids":"34317,34562,34828,35683",
             "locationid":30000142,
-            "plot_title":"T3 Cruisers -- Jita",
+            "plot_title":"Tactical Destroyers -- Jita",
             "plot_path":"",
-            "plot_free_y":"TRUE"
+            "plot_free_y":"FALSE"
         },
-        "filename": "t3c-zoomin-plot"
+        "filename": "t3d-group-plot"
+    },
+    {
+        "template": "group_plot",
+        "required_args": {
+            "img_width":1600,
+            "img_height":900,
+            "date_range":45,
+            "itemids":"11987,11985,11989,11978",
+            "locationid":30000142,
+            "plot_title":"Logistics Cruisers -- Jita",
+            "plot_path":"",
+            "plot_free_y":"FALSE"
+        },
+        "filename": "logi-group-plot"
+    },
+    {
+        "template": "group_plot",
+        "required_args": {
+            "img_width":1600,
+            "img_height":900,
+            "date_range":45,
+            "itemids":"28844,28846,28848,28850",
+            "locationid":30000142,
+            "plot_title":"Jump Freighters -- Jita",
+            "plot_path":"",
+            "plot_free_y":"FALSE"
+        },
+        "filename": "jfs-group-plot"
     }
     ]
 }
