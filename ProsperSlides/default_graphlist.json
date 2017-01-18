@@ -327,7 +327,7 @@
             "locationid":30000142,
             "plot_title":"Fuel Blocks + Build Costs -- Intraday Prices Jita",
             "industry_fee":2,
-            "plot_path"
+            "plot_path":""
         },
         "filename": "fuel-blocks-plot"
     },
