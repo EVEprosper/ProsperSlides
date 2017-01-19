@@ -8,10 +8,12 @@ Using: https://developers.google.com/slides API
 
 from datetime import datetime
 from os import path, makedirs, access, W_OK#, R_OK
+import platform
 
 import ujson as json
 import requests
 from plumbum import cli, local
+import dropbox
 
 import Helpers as ps_helper
 import Plotting as ps_plotting
@@ -132,6 +134,63 @@ def generate_plots(
         index += 1
         plot_list.append(plot_path)
 
+    logger.debug(plot_list)
+    return plot_list
+
+DROPBOX_TOKEN = config.get('OAUTH', 'dropbox_token')
+def get_dropbox_links(
+        plot_list
+    ):
+    """use dropbox app to share generated plots
+
+        Args:
+            plot_list (:obj:`list`) list of plot-paths in dropbox filepath
+
+        Returns:
+            (:obj: `list): list of dropbox share links
+
+        Notes:
+            files_get_temporary_link(path) links are only good for 4hrs
+
+    """
+    truncate_path = path.join(
+        local.env.home,
+        'Dropbox'
+    )
+    if platform.system() == 'Windows':
+        #Fuck you and your backslashes
+        truncate_path = truncate_path.replace('\\', '/')
+
+    dropbox_handle = dropbox.Dropbox(DROPBOX_TOKEN)
+    dropbox_handle.users_get_current_account() #TODO: needed?
+    dropbox_links = []
+    dropbox_alert = []
+    for plot_path in cli.terminal.Progress(plot_list):
+        #TODO: move to func for retry decorator?
+        plot_file = plot_path.replace(truncate_path, '')
+        try:
+            plot_link = dropbox_handle.files_get_temporary_link(plot_file)
+        except Exception as err_msg:
+            logger.warning(
+                'WARNING: unable to generate share link' +
+                '\n\tplot_path={0}'.format(plot_path) +
+                '\n\tException={0}'.format(repr(err_msg))
+            )
+            dropbox_alert.append((plot_file, err_msg))   #This seems dumb
+            dropbox_links.append('')
+            continue
+        dropbox_links.append(plot_link)
+
+    if dropbox_alert:
+        #for alerting discord only once
+        logger.error(
+            'ERROR: unable to generate share links' +
+            '\n\traised issues={0}'.format(dropbox_alert)
+        )
+
+    logger.debug(dropbox_links)
+    return dropbox_links
+
 class ProsperSlides(cli.Application):
     """Plumbum CLI application to build EVE Prosper Market Show slidedeck"""
     _log_builder = ps_helper.build_logger('ProsperSlides')  #TODO: fix ME?
@@ -155,7 +214,8 @@ class ProsperSlides(cli.Application):
             'Dropbox',
             'Prosper Shownotes',
             'Plots',
-            TODAY
+            TODAY,
+            'Slides'
         )
     )
     platform = ps_helper.HostPlatform.ERROR
@@ -181,6 +241,8 @@ class ProsperSlides(cli.Application):
 
     def main(self):
         global logger
+        if not self.debug:
+            ps_helper.add_discord_loghook(self._log_builder)
         logger = self._log_builder.logger
         ps_helper.LOGGER = logger #TODO: this seems sloppy?
         logger.debug('hello world')
@@ -188,10 +250,11 @@ class ProsperSlides(cli.Application):
         logger.debug(self.graph_profile)
 
         print('-- Building Plots in: {0} --'.format(self.outfile))
-        generate_plots(
+        plot_list = generate_plots(
             list(self.graph_profile['plots']),
             self.outfile
         )
+        link_list = get_dropbox_links(plot_list)
 
 if __name__ == '__main__':
     ProsperSlides.run()

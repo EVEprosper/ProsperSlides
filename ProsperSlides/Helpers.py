@@ -50,6 +50,22 @@ def build_logger(
         log_dir,
         config_obj=config
     )
+
+    LOGGER = log_builder.logger
+    return log_builder
+
+def add_discord_loghook(log_builder):
+    """for automation, add discord webhook
+
+    Args:
+        (:obj:`prosper_logging.ProsperLogger`) log_builder to hook things to
+
+    Returns:
+        (:obj:`prosper_logging.ProsperLogger`) adjusted log_builder
+
+    """
+    global LOGGER
+    log_builder.configure_discord_logger()
     LOGGER = log_builder.logger
     return log_builder
 
