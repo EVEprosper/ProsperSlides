@@ -89,7 +89,7 @@ uniqueID <- unique(ec$typeid)
 ec$SellOrder.smooth <- NA
 for(id in uniqueID){{
   prices <- ec$SellOrder[ec$typeid==id]
-  smooth <- rollmean(prices, k=24, align='center')
+  smooth <- rollmean(prices, k=24, align='right')
   ec$SellOrder.smooth[ec$typeid==id] <- smooth
 }}
 plot.data <- ec

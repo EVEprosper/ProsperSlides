@@ -96,7 +96,7 @@ def generate_plots(
         (:obj:`list` str): collection of filepaths where plots should be (in order)
 
     """
-    logger.debug(plot_profiles)
+    print('Generating Plots from list')
     ps_plotting.PLOT_LOGGER = logger #push current logger down to Plotting module
     plot_list = []
     index = 0
@@ -153,6 +153,7 @@ def get_dropbox_links(
             files_get_temporary_link(path) links are only good for 4hrs
 
     """
+    print('Getting share links from Dropbox')
     truncate_path = path.join(
         local.env.home,
         'Dropbox'
@@ -179,7 +180,7 @@ def get_dropbox_links(
             dropbox_alert.append((plot_file, err_msg))   #This seems dumb
             dropbox_links.append('')
             continue
-        dropbox_links.append(plot_link)
+        dropbox_links.append(plot_link.link)
 
     if dropbox_alert:
         #for alerting discord only once
@@ -242,12 +243,10 @@ class ProsperSlides(cli.Application):
     def main(self):
         global logger
         if not self.debug:
-            ps_helper.add_discord_loghook(self._log_builder)
+            self._log_builder = ps_helper.add_discord_loghook(self._log_builder)
         logger = self._log_builder.logger
         ps_helper.LOGGER = logger #TODO: this seems sloppy?
         logger.debug('hello world')
-        logger.debug(self.outfile)
-        logger.debug(self.graph_profile)
 
         print('-- Building Plots in: {0} --'.format(self.outfile))
         plot_list = generate_plots(
