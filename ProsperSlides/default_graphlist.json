@@ -3,7 +3,7 @@
     {
         "template": "quantmod_chart",
         "required_args": {
-            "itemid": 29668,
+            "itemid": 44992,
             "regionid": 10000002,
             "plot_path": "",
             "img_width": 1600,
@@ -17,7 +17,7 @@
     {
         "template": "quantmod_chart",
         "required_args": {
-            "itemid": 29668,
+            "itemid": 44992,
             "regionid": 10000002,
             "plot_path": "",
             "img_width": 1600,
@@ -27,31 +27,6 @@
             "default_subset": "last 365 days"
         },
         "filename": "plex-1yr-plot"
-    },
-    {
-        "template": "zoomin_chart",
-        "required_args": {
-            "img_width":1600,
-            "img_height":900,
-            "date_range":45,
-            "itemid":29668,
-            "locationid":30000142,
-            "plot_title":"PLEX -- Intraday Prices",
-            "plot_path":""
-        },
-        "filename": "plex-zoomin-plot"
-    },
-    {
-        "template": "RMT_plot",
-        "required_args": {
-            "img_width":1600,
-            "img_height":900,
-            "date_range":45,
-            "locationid":30000142,
-            "plot_title":"RMT Items -- AUR Normalized",
-            "plot_path":""
-        },
-        "filename": "RMT-plot"
     },
     {
         "template": "skilltrade_chart",

@@ -93,7 +93,7 @@ theme_dark <- function( ... ) {{
 ec$SellOrder.smooth <- NA
 for(id in list.blocks){{
   prices <- ec$SellOrder[ec$typeid==id]
-  smooth <- rollmean(prices, k=24, align='right')
+  smooth <- rollmean(prices, k=24, align='right', fill=NA)
   ec$SellOrder.smooth[ec$typeid==id] <- smooth
 }}
 ec$variable <- ec$typeid
