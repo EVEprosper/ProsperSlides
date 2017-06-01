@@ -69,10 +69,11 @@ crest.query <- paste0(
     'CONCAT(YEAR(price_date), \'-\', IF(WEEK(price_date)<10, 0, \'\'), WEEK(price_date)) AS `weekNum`, ',
     'volume * avgPrice as `netTrade` ',
     'FROM crest_markethistory ',
-    'AND itemid NOT IN (29668) ',
     'WHERE price_date > \'', date.min, '\' ',
+    'AND itemid NOT IN (29668) ',
     'AND regionID=', plot.locationid, ' '
 )
+print(crest.query)
 crest <- sqlQuery(emd, crest.query)
 
 odbcClose(sde)
