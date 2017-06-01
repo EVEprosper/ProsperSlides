@@ -59,7 +59,7 @@ mats  <- sqlQuery(sde, mats.query)
 
 list.ships <- types$typeID[types$categoryName=='Ship']
 list.mats  <- mats$typeID
-list.RMT   <- c(29668,34133,34132,40519,40520)
+list.RMT   <- c(29668,34133,34132,40519,40520,44992)
 list.skill <- c(40519,40520)
 
 crest.query <- paste0(
@@ -69,6 +69,7 @@ crest.query <- paste0(
     'CONCAT(YEAR(price_date), \'-\', IF(WEEK(price_date)<10, 0, \'\'), WEEK(price_date)) AS `weekNum`, ',
     'volume * avgPrice as `netTrade` ',
     'FROM crest_markethistory ',
+    'AND itemid NOT IN (29668) ',
     'WHERE price_date > \'', date.min, '\' ',
     'AND regionID=', plot.locationid, ' '
 )
