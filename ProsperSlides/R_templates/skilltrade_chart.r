@@ -10,7 +10,7 @@ InjectorID  = 40520
 PLEX_ID     = 29668
 MPCT_ID     = 34133
 ResculptID  = 34132
-typeID_list <- c(29668,34133,34132,40519,40520)
+typeID_list <- c(29668,34133,34132,40519,40520,44992)
 plot.typeids.str <- paste(typeID_list, collapse=',')
 
 PLEX_AUR <- 3500
@@ -51,6 +51,10 @@ ec$typeid <- as.factor(ec$typeid)
 ec <- subset(ec, SellOrder > 0)
 ec$datetime <- paste(ec$date, ec$hour, sep=' ')
 ec$datetime <- as.POSIXlt(ec$datetime, tz='GMT')
+## PLEX SPLIT ##
+ec$SellOrder[ec$typeid==44992] = ec$SellOrder[ec$typeid==44992] * 500
+ec$BuyOrder[ec$typeid==44992] = ec$BuyOrder[ec$typeid==44992] * 500
+ec$typeid[ec$typeid==44992] = 29668
 
 ## CREST Lookups ##
 CREST_BASE = 'https://crest-tq.eveonline.com/'
