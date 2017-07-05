@@ -31,7 +31,7 @@ if(nrow(event)==0){{
 ## Get Data ##
 ec.query <- paste0(
   'SELECT price_date AS `date`, price_time AS `hour`, locationid, typeid, ',
-  'SUM(IF(buy_sell=1, price_best,0)) AS `SellOrder` ',
+  'SUM(IF(buy_sell=1, price_best, NULL)) AS `SellOrder` ',
   'FROM snapshot_evecentral ',
   'WHERE locationid=', plot.locationid, ' ',
   'AND typeid IN (', plot.typeids.str, ') ',
